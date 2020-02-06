@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tfgg484-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,8 +33,18 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/init_rom.coe
 add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/init_rom.coe
 read_verilog -library xil_defaultlib {
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Define.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/model_test.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -45,12 +57,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top Decoder -part xc7a35tfgg484-2
+synth_design -top model_test -part xc7a35tfgg484-2
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Decoder.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file Decoder_utilization_synth.rpt -pb Decoder_utilization_synth.pb"
+write_checkpoint -force -noxdef model_test.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file model_test_utilization_synth.rpt -pb model_test_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

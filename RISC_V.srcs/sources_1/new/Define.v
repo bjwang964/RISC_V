@@ -49,9 +49,11 @@
 `define And                     4'b0011
 `define Or                      4'b0100
 `define Xor                     4'b0101
+
 `define Srl                     4'b0110
 `define Sll                     4'b0111
 `define Sllu                    4'b1000
 `define Sra                     4'b1001
+
 `define Compare                 4'b1010
 `define CompareU                4'b1011

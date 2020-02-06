@@ -23,70 +23,205 @@
 
 module testbench(
     );
-   
     reg reset;
     reg `InstrBus i_Instr;
 
-    //执行控制
-    wire `UnitBus o_Unit;
-    wire `OpBus   o_Operate;
-    //output reg `MopBus o_Mop,
+    reg i_write_ce;
+    reg `RegBus i_write_reg_addr;
+    reg `DataBus i_write_reg_data;
 
-    //读写寄存器使能
-    wire o_read_reg_ce1;
-    wire o_read_reg_ce2;
+    wire `DataBus o_res;
     wire o_write_reg_ce;
-
-    //读写寄存器地址
-    wire `RegBus o_read_reg_addr1;
-    wire `RegBus o_read_reg_addr2;
     wire `RegBus o_write_reg_addr;
 
-    //立即数
-    wire `DataBus o_imm;
 
-    Decoder Decoder0
+    model_test test0
     (
         reset, i_Instr,
-        o_Unit, o_Operate,
-        o_read_reg_ce1, o_read_reg_ce2, o_write_reg_ce,
-        o_read_reg_addr1, o_read_reg_addr2, o_write_reg_addr,
-        o_imm
+        i_write_ce, i_write_reg_addr, i_write_reg_data,
+        o_res, o_write_reg_ce, o_write_reg_addr
     );
+
 
     initial
     begin
-        i_Instr = 32'b00000000000000000000000000000000;
+
+        i_write_ce = `WriteDisable;
+        i_write_reg_addr = `Non5;
+        i_write_reg_data = `Non32;
+        i_Instr = 32'h00000000;
+
         reset = `ResetDisable;
         #5 reset = `ResetEnable;
         #5 reset = `ResetDisable;
 
-        #5 i_Instr = 32'b10101010101000010000000110010011;
-        #5 i_Instr = 32'b10101010101000010010000110010011;
-        #5 i_Instr = 32'b10101010101000010011000110010011;
-        #5 i_Instr = 32'b10101010101000010100000110010011;
-        #5 i_Instr = 32'b10101010101000010110000110010011;
-        #5 i_Instr = 32'b10101010101000010111000110010011;
-        #5 i_Instr = 32'b00000001011000010001000110010011;
-        #5 i_Instr = 32'b00000001011000010101000110010011;
-        #5 i_Instr = 32'b01000001011000010101000110010011;
-
+        #5 i_Instr = 32'hffe58513;
+        #5 i_Instr = 32'hf9c5a513;
+        #5 i_Instr = 32'h0645b513;
+        #5 i_Instr = 32'h0026c613;
+        #5 i_Instr = 32'h0026e613;
+        #5 i_Instr = 32'h0026f613;
+        #5 i_Instr = 32'h00269613;
+        #5 i_Instr = 32'h0026d613;
+        #5 i_Instr = 32'h40275613;
         
-        #5 i_Instr = 32'b00000000000100010000000110110011;
-        #5 i_Instr = 32'b01000000000100010000000110110011;
-        #5 i_Instr = 32'b00000000000100010001000110110011;
-        #5 i_Instr = 32'b00000000000100010010000110110011;
-        #5 i_Instr = 32'b00000000000100010011000110110011;
-        #5 i_Instr = 32'b00000000000100010100000110110011;
-        #5 i_Instr = 32'b00000000000100010101000110110011;
-        #5 i_Instr = 32'b01000000000100010101000110110011;
-        #5 i_Instr = 32'b00000000000100010110000110110011;
-        #5 i_Instr = 32'b00000000000100010111000110110011;
-        #5 i_Instr = 32'b10101010101000010000000110010011;
-        #5 i_Instr = 32'b10101010101000010000000110010011;
+    end
 
 
+
+
+/*
+    reg reset;
+    reg re_1;
+    reg `RegBus read_addr_1;
+    wire `DataBus rdata_1;
+
+    reg re_2; 
+    reg `RegBus read_addr_2; 
+    wire `DataBus rdata_2;
+
+    reg we;
+    reg `RegBus write_addr;
+    reg `DataBus wdata;
+
+
+    reg re_3;
+    reg `DataBus i_imm_data;
+    wire `DataBus rdata_3;
+
+     wire `DataBus o_operand_1;
+        wire `DataBus o_operand_2;
+        wire `DataBus o_operand_3;
+
+
+
+
+
+    register register0
+    (
+        reset,
+        re_1, read_addr_1, rdata_1,
+        re_2, read_addr_2, rdata_2,
+
+        we, write_addr, wdata
+    );
+
+    operand_generator OG0
+    (
+        reset,
+        re_1, re_2, re_3,
+        rdata_1, rdata_2, rdata_3,
+        o_operand_1, o_operand_2, o_operand_3
+
+    );
+
+    initial
+    begin
+        reset = `ResetDisable;
+        #5 reset = `ResetEnable;
+        #5 reset = `ResetDisable;
+        #5
+        re_1 = `ReadEnable;
+        re_2 = `ReadEnable;
+        read_addr_1 = 5'b00000;
+        read_addr_2 = 5'b00001;
+    end
+
+*/
+
+//    reg reset;
+
+//        reg `InstrBus i_Instr;
+
+//        reg i_write_reg_ce;
+//        reg `RegBus i_write_reg_addr;
+//        reg `DataBus i_write_reg_data;
+
+//        wire `UnitBus o_Unit;
+//        wire `OpBus   o_Operate;
+
+//        wire `DataBus o_operand_1;
+//        wire `DataBus o_operand_2;
+//        wire `DataBus o_operand_3;
+
+//        wire o_write_reg_ce;
+//        wire `RegBus o_write_reg_addr;
+
+//        Instr_Decode De0
+//        (
+//            reset, i_Instr,
+//            i_write_reg_ce, i_write_reg_addr, i_write_reg_data,
+//            o_Unit, o_Operate, o_operand_1, o_operand_2, o_operand_3,
+//            o_write_reg_ce, o_write_reg_addr
+//        );
+
+//        initial 
+//        begin
+//        i_write_reg_ce = `WriteDisable;
+//        i_write_reg_addr = `Non5;
+//        i_write_reg_data = `Non32;
+
+//        reset = `ResetDisable;
+//        #5 reset = `ResetEnable;
+//        #5 reset = `ResetDisable;
+
+//        #5 i_Instr = 32'h00c58533;
+//        #5 i_Instr = 32'h40d605b3;
+//        #5 i_Instr = 32'h00f726b3;
+//        #5 i_Instr = 32'h00c5b6b3;
+//        #5 i_Instr = 32'h00e6c7b3;
+//        #5 i_Instr = 32'h00e6e7b3;
+//        #5 i_Instr = 32'h00e6f7b3;
+//        #5 i_Instr = 32'h00c5d833;
+//        #5 i_Instr = 32'h40c5d833;
+//        #5 i_Instr = 32'h00c59833;
+//        end
+
+
+
+
+
+/*
+    reg reset;
+
+    reg i_ce1;
+    reg i_ce2;
+    reg i_ce3;
+
+    reg `DataBus i_reg_data_1;
+    reg `DataBus i_reg_data_2;
+    reg `DataBus i_imm_data;
+
+    wire `DataBus o_operand_1;
+    wire `DataBus o_operand_2;
+    wire `DataBus o_operand_3;
+
+    operand_generator OG0
+    (
+        reset, i_ce1, i_ce2, i_ce3,
+        i_reg_data_1, i_reg_data_2, i_imm_data,
+
+        o_operand_1,o_operand_2,o_operand_3
+    );
+
+
+    initial
+    begin
+        reset = `ResetDisable;
+        #5 reset = `ResetEnable;
+        #5 reset = `ResetDisable;
+        #5
+        i_ce1 = `ReadEnable;
+        i_ce2 = `ReadEnable;
+        i_ce3 = `ReadDisable;
+
+        i_reg_data_1 = 32'h00c58533;;
+        i_reg_data_2 = 32'h40c5d833;;
+        i_imm_data = `Non32;
 
     end
+    */
+    
+    
     
 endmodule

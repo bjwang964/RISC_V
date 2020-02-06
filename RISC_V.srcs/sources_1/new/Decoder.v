@@ -42,6 +42,7 @@ module Decoder(
         output reg `RegBus o_write_reg_addr,
 
         //Á¢¼´Êý
+        output reg o_imm_ce,
         output reg `DataBus o_imm
 
     );
@@ -77,6 +78,7 @@ module Decoder(
             o_write_reg_addr = `Non5;
 
             o_imm = `Non32;
+            o_imm_ce = `ReadDisable;
         end
 
         else
@@ -122,6 +124,7 @@ module Decoder(
                                 o_write_reg_addr = rd;
 
                                 o_imm = `Non32;
+                                o_imm_ce = `ReadDisable;
 
                             end
 
@@ -140,6 +143,7 @@ module Decoder(
                                 o_write_reg_addr = rd;
 
                                 o_imm = `Non32;
+                                o_imm_ce = `ReadDisable;
                             end
                         end 
 
@@ -159,6 +163,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
 
                         end
 
@@ -178,6 +183,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
 
 
@@ -196,6 +202,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
 
                         3'b100:
@@ -213,6 +220,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
 
                         3'b101:
@@ -232,6 +240,7 @@ module Decoder(
                                 o_write_reg_addr = rd;
 
                                 o_imm = `Non32;
+                                o_imm_ce = `ReadDisable;
                             end
 
                             else
@@ -249,6 +258,7 @@ module Decoder(
                                 o_write_reg_addr = rd;
 
                                 o_imm = `Non32;
+                                o_imm_ce = `ReadDisable;
                             end
                             
                         end
@@ -269,6 +279,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
 
 
@@ -287,6 +298,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
 
 
@@ -305,6 +317,7 @@ module Decoder(
                             o_write_reg_addr = `Non5;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
                     endcase
 
@@ -331,6 +344,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
 
                         end 
 
@@ -349,6 +363,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
 
                         end
 
@@ -367,6 +382,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{20{1'b0}}, imm_12};
+                            o_imm_ce = `ReadEnable;
                         end
 
                         3'b100:
@@ -384,6 +400,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
                         end
 
                         3'b110:
@@ -401,6 +418,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
                         end
 
                         3'b111:
@@ -418,6 +436,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
                         end
                         
                         3'b001:
@@ -435,6 +454,7 @@ module Decoder(
                             o_write_reg_addr = rd;
 
                             o_imm = {{26{1'b0}}, shamt};
+                            o_imm_ce = `ReadEnable;
                         end
 
                         3'b101:
@@ -454,6 +474,7 @@ module Decoder(
                                 o_write_reg_addr = rd;
 
                                 o_imm = {{26{1'b0}}, shamt};
+                                o_imm_ce = `ReadEnable;
                             end
 
                             else
@@ -471,6 +492,7 @@ module Decoder(
                                 o_write_reg_addr = rd;
 
                                 o_imm = {{26{1'b0}}, shamt};
+                                o_imm_ce = `ReadEnable;
                             end
                         end
 
@@ -489,6 +511,7 @@ module Decoder(
                             o_write_reg_addr = `Non5;
 
                             o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
                         end
                     endcase
                 end
