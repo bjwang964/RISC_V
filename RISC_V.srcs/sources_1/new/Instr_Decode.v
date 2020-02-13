@@ -38,7 +38,13 @@ module Instr_Decode(
         output `DataBus o_operand_3,
 
         output o_write_reg_ce,
-        output `RegBus o_write_reg_addr
+        output `RegBus o_write_reg_addr,
+
+        output o_mem_re,
+        output o_mem_we,
+        output `DataBus o_mem_write_data,
+        output [5:0] o_mem_data_length,
+        output o_mem_data_sign
     );
 
     //¼Ä´æÆ÷Ê¹ÄÜ
@@ -57,6 +63,8 @@ module Instr_Decode(
     wire dec_opger_immre;
     wire `DataBus dec_opger_imm;
 
+    //¼ÓÔØ´æ´¢
+    wire `RegBus dec_reg_mem_addr;
     
     Decoder Decoder0(
         reset, 
@@ -64,14 +72,16 @@ module Instr_Decode(
         o_Unit, o_Operate, 
         dec_reg_opger_regre1, dec_reg_opger_regre2, o_write_reg_ce,
         dec_reg_raddr1, dec_reg_raddr2, o_write_reg_addr,
-        dec_opger_immre, dec_opger_imm
+        dec_opger_immre, dec_opger_imm,
+        o_mem_re, o_mem_we, dec_reg_mem_addr, o_mem_data_length, o_mem_data_sign
     );
 
     register register0(
         reset,
         dec_reg_opger_regre1, dec_reg_raddr1,reg_opger_data1,
         dec_reg_opger_regre2, dec_reg_raddr2,reg_opger_data2,
-        i_write_reg_ce, i_write_reg_addr, i_write_reg_data
+        i_write_reg_ce, i_write_reg_addr, i_write_reg_data,
+        o_mem_we, dec_reg_mem_addr, o_mem_write_data
     );
 
     operand_generator operand_generator0(
@@ -80,5 +90,7 @@ module Instr_Decode(
         reg_opger_data1, reg_opger_data2, dec_opger_imm,
         o_operand_1,o_operand_2,o_operand_3
     );
+
+
 
 endmodule

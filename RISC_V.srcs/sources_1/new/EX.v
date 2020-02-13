@@ -33,11 +33,29 @@ module EX(
         input i_write_reg_ce,
         input `RegBus i_write_reg_addr,
 
+        input i_mem_re,
+        input i_mem_we,
+        input `DataBus i_mem_write_data,
+        input [5:0] i_mem_data_length,
+        input i_mem_data_sign,
+
 
         output reg `DataBus o_res,
         output o_write_reg_ce,
-        output `RegBus o_write_reg_addr
+        output `RegBus o_write_reg_addr,
+
+        output o_mem_en,
+        output o_mem_we,
+        output `DataBus o_mem_write_data,
+        output [5:0] o_mem_data_length,
+        output o_mem_data_sign
     );
+
+    assign o_mem_en = i_mem_re | i_mem_we;
+    assign o_mem_we = i_mem_we;
+    assign o_mem_write_data = i_mem_write_data;
+    assign o_mem_data_length = i_mem_data_length;
+    assign o_mem_data_sign = i_mem_data_sign;
 
     assign o_write_reg_ce = i_write_reg_ce;
     assign o_write_reg_addr = i_write_reg_addr;

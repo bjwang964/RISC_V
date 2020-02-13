@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="137301fs"></ZoomEndTime>
+      <Cursor1Time time="80000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="292"></NameColumnWidth>
+      <ValueColumnWidth column_width="140"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wave_markers>
+      <marker time="20000" label="" />
+      <marker time="30000" label="" />
+      <marker time="50000" label="" />
+      <marker time="40000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="group4" type="group">
+      <obj_property name="label">IF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/if_id_in_instr" type="array">
+         <obj_property name="ElementShortName">if_id_in_instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">if_id_in_instr[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group5" type="group">
+      <obj_property name="label">ID</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_Unit" type="array">
+         <obj_property name="ElementShortName">id_ex_in_Unit[2:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_Unit[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_Operate" type="array">
+         <obj_property name="ElementShortName">id_ex_in_Operate[3:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_Operate[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_operand_1" type="array">
+         <obj_property name="ElementShortName">id_ex_in_operand_1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_operand_1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_operand_2" type="array">
+         <obj_property name="ElementShortName">id_ex_in_operand_2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_operand_2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_operand_3" type="array">
+         <obj_property name="ElementShortName">id_ex_in_operand_3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_operand_3[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_write_reg_ce" type="logic">
+         <obj_property name="ElementShortName">id_ex_in_write_reg_ce</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_write_reg_ce</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_write_reg_addr" type="array">
+         <obj_property name="ElementShortName">id_ex_in_write_reg_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_write_reg_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_re" type="logic">
+         <obj_property name="ElementShortName">id_ex_in_mem_re</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_mem_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_we" type="logic">
+         <obj_property name="ElementShortName">id_ex_in_mem_we</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_mem_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_write_data" type="array">
+         <obj_property name="ElementShortName">id_ex_in_mem_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_mem_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_data_length" type="array">
+         <obj_property name="ElementShortName">id_ex_in_mem_data_length[5:0]</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_mem_data_length[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_data_sign" type="logic">
+         <obj_property name="ElementShortName">id_ex_in_mem_data_sign</obj_property>
+         <obj_property name="ObjectShortName">id_ex_in_mem_data_sign</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group6" type="group">
+      <obj_property name="label">EX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_res" type="array">
+         <obj_property name="ElementShortName">ex_mem_in_res[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_res[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_write_reg_ce" type="logic">
+         <obj_property name="ElementShortName">ex_mem_in_write_reg_ce</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_write_reg_ce</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_write_reg_addr" type="array">
+         <obj_property name="ElementShortName">ex_mem_in_write_reg_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_write_reg_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_mem_we" type="logic">
+         <obj_property name="ElementShortName">ex_mem_in_mem_we</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_mem_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_mem_write_data" type="array">
+         <obj_property name="ElementShortName">ex_mem_in_mem_write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_mem_write_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_mem_data_length" type="array">
+         <obj_property name="ElementShortName">ex_mem_in_mem_data_length[5:0]</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_mem_data_length[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_mem_data_sign" type="logic">
+         <obj_property name="ElementShortName">ex_mem_in_mem_data_sign</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_mem_data_sign</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_in_mem_en" type="logic">
+         <obj_property name="ElementShortName">ex_mem_in_mem_en</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_in_mem_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ex_mem_out_mem_en" type="logic">
+         <obj_property name="ElementShortName">ex_mem_out_mem_en</obj_property>
+         <obj_property name="ObjectShortName">ex_mem_out_mem_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group7" type="group">
+      <obj_property name="label">MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/mem_wb_in_mem_en" type="logic">
+         <obj_property name="ElementShortName">mem_wb_in_mem_en</obj_property>
+         <obj_property name="ObjectShortName">mem_wb_in_mem_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/mem_wb_in_ex_res" type="array">
+         <obj_property name="ElementShortName">mem_wb_in_ex_res[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_wb_in_ex_res[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/mem_wb_in_mem_data" type="array">
+         <obj_property name="ElementShortName">mem_wb_in_mem_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_wb_in_mem_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/finish" type="logic">
+         <obj_property name="ElementShortName">finish</obj_property>
+         <obj_property name="ObjectShortName">finish</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group8" type="group">
+      <obj_property name="label">WB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/wb_id_reg_ce" type="logic">
+         <obj_property name="ElementShortName">wb_id_reg_ce</obj_property>
+         <obj_property name="ObjectShortName">wb_id_reg_ce</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/wb_id_reg_addr" type="array">
+         <obj_property name="ElementShortName">wb_id_reg_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_id_reg_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/wb_id_reg_data" type="array">
+         <obj_property name="ElementShortName">wb_id_reg_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_id_reg_data[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -34,9 +34,12 @@ module register(
 
         input we,
         input `RegBus write_addr,
-        input `DataBus wdata
-    );
+        input `DataBus wdata,
 
+        input mem_we,
+        input `RegBus mem_reg_addr,
+        output reg `DataBus mem_data
+    );
 
       reg `DataBus Regsiter [31:0];
 
@@ -61,8 +64,10 @@ module register(
               Regsiter[14] = 32'h8000000e;
               Regsiter[15] = 32'h0000000f;
               Regsiter[16] = 32'h00000010;
+              Regsiter[17] = 32'h00000011;
               rdata_1 = `Non32;
               rdata_2 = `Non32;
+              mem_data = `Non32;
           end
 
           else
@@ -88,6 +93,16 @@ module register(
               if(we == `WriteEnable)
               begin
                   Regsiter[write_addr] = wdata;
+              end
+
+              if(mem_we == `WriteEnable)
+              begin
+                  mem_data = Regsiter[mem_reg_addr];
+              end
+              
+              else
+              begin
+                mem_data = `Non32;
               end
           end
       end

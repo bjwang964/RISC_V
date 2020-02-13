@@ -43,7 +43,14 @@ module Decoder(
 
         //Á¢¼´Êý
         output reg o_imm_ce,
-        output reg `DataBus o_imm
+        output reg `DataBus o_imm,
+
+        //¼ÓÔØ´æ´¢
+        output reg o_mem_re,
+        output reg o_mem_we,
+        output reg `RegBus o_mem_write_reg,
+        output reg [5:0] o_mem_data_length,
+        output reg o_mem_data_sign
 
     );
 
@@ -58,7 +65,7 @@ module Decoder(
     wire [11:0] imm_12 = i_Instr[31:20];
     wire [6:0] imm_7 = i_Instr[31:25];
     wire [19:0] imm_20 = i_Instr[31:12];
-    wire [4:0] imm_4 = i_Instr[11:7];
+    wire [4:0] imm_5 = i_Instr[11:7];
     wire [5:0] shamt = i_Instr[25:20];
     
 
@@ -79,6 +86,12 @@ module Decoder(
 
             o_imm = `Non32;
             o_imm_ce = `ReadDisable;
+
+            o_mem_re = `ReadDisable;
+            o_mem_we = `WriteDisable;
+            o_mem_write_reg = `Non5;
+            o_mem_data_length = `Non6;
+            o_mem_data_sign = `SignExtenDisable;
         end
 
         else
@@ -88,18 +101,248 @@ module Decoder(
                 `Branch: 
                 begin
 
-                end
+                end*/
 
                 `Load:
                 begin
+                    case (funct_3)
+                        3'b000: //lb
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
 
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteEnable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = rd;
+
+                            o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadEnable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Byte;
+                            o_mem_data_sign = `SignExtenEnable;
+                        end 
+
+                        3'b001: //lh
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteEnable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = rd;
+
+                            o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadEnable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `HalfWord;
+                            o_mem_data_sign = `SignExtenEnable;
+                        end 
+
+                        3'b010: //lw
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteEnable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = rd;
+
+                            o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadEnable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Word;
+                            o_mem_data_sign = `SignExtenEnable;
+                        end 
+
+                        3'b100: //lbu
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteEnable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = rd;
+
+                            o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadEnable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Byte;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end 
+
+                        3'b101: //lhu
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteEnable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = rd;
+
+                            o_imm = {{20{imm_12[11]}}, imm_12};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadEnable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `HalfWord;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end 
+                        default: 
+                        begin
+                            o_Unit = `Non3;
+                            o_Operate = `Non4;
+                            
+                            o_read_reg_ce1 = `ReadDisable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteDisable;
+
+                            o_read_reg_addr1 = `Non5;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = `Non5;
+
+                            o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end
+                    endcase
                 end
 
                 `Store:
                 begin
+                    case (funct_3)
+                        3'b000: //sb
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteDisable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = `Non5;
+
+                            o_imm = {{20{imm_7[6]}}, imm_7, imm_5};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteEnable;
+                            o_mem_write_reg = rs_2;
+                            o_mem_data_length = `Byte;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end
+
+                        3'b001: //sh
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteDisable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = `Non5;
+
+                            o_imm = {{20{imm_7[6]}}, imm_7, imm_5};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteEnable;
+                            o_mem_write_reg = rs_2;
+                            o_mem_data_length = `HalfWord;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end
+
+                        3'b010: //sw
+                        begin
+                            o_Operate = `Add;
+                            o_Unit = `ExeInt;
+
+                            o_read_reg_ce1 = `ReadEnable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteDisable;
+
+                            o_read_reg_addr1 = rs_1;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = `Non5;
+
+                            o_imm = {{20{imm_7[6]}}, imm_7, imm_5};
+                            o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteEnable;
+                            o_mem_write_reg = rs_2;
+                            o_mem_data_length = `Word;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end
+
+                        default: 
+                        begin
+                            o_Unit = `Non3;
+                            o_Operate = `Non4;
+                            
+                            o_read_reg_ce1 = `ReadDisable;
+                            o_read_reg_ce2 = `ReadDisable;
+                            o_write_reg_ce = `WriteDisable;
+
+                            o_read_reg_addr1 = `Non5;
+                            o_read_reg_addr2 = `Non5;
+                            o_write_reg_addr = `Non5;
+
+                            o_imm = `Non32;
+                            o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
+                        end
+                    endcase
 
                 end
-                */
+                
 
                 /*************¼Ä´æÆ÷¼ÆËã*************/
                 `CalcReg:
@@ -126,6 +369,12 @@ module Decoder(
                                 o_imm = `Non32;
                                 o_imm_ce = `ReadDisable;
 
+                                o_mem_re = `ReadDisable;
+                                o_mem_we = `WriteDisable;
+                                o_mem_write_reg = `Non5;
+                                o_mem_data_length = `Non6;
+                                o_mem_data_sign = `SignExtenDisable;
+
                             end
 
                             else
@@ -144,6 +393,12 @@ module Decoder(
 
                                 o_imm = `Non32;
                                 o_imm_ce = `ReadDisable;
+
+                                o_mem_re = `ReadDisable;
+                                o_mem_we = `WriteDisable;
+                                o_mem_write_reg = `Non5;
+                                o_mem_data_length = `Non6;
+                                o_mem_data_sign = `SignExtenDisable;
                             end
                         end 
 
@@ -165,6 +420,12 @@ module Decoder(
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
 
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
+
                         end
 
 
@@ -184,6 +445,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
 
@@ -203,6 +470,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
                         3'b100:
@@ -221,6 +494,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
                         3'b101:
@@ -241,6 +520,12 @@ module Decoder(
 
                                 o_imm = `Non32;
                                 o_imm_ce = `ReadDisable;
+
+                                o_mem_re = `ReadDisable;
+                                o_mem_we = `WriteDisable;
+                                o_mem_write_reg = `Non5;
+                                o_mem_data_length = `Non6;
+                                o_mem_data_sign = `SignExtenDisable;
                             end
 
                             else
@@ -259,6 +544,12 @@ module Decoder(
 
                                 o_imm = `Non32;
                                 o_imm_ce = `ReadDisable;
+
+                                o_mem_re = `ReadDisable;
+                                o_mem_we = `WriteDisable;
+                                o_mem_write_reg = `Non5;
+                                o_mem_data_length = `Non6;
+                                o_mem_data_sign = `SignExtenDisable;
                             end
                             
                         end
@@ -280,6 +571,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
 
@@ -299,6 +596,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
 
@@ -318,6 +621,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
                     endcase
 
@@ -346,6 +655,12 @@ module Decoder(
                             o_imm = {{20{imm_12[11]}}, imm_12};
                             o_imm_ce = `ReadEnable;
 
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
+
                         end 
 
                         3'b010:
@@ -365,6 +680,12 @@ module Decoder(
                             o_imm = {{20{imm_12[11]}}, imm_12};
                             o_imm_ce = `ReadEnable;
 
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
+
                         end
 
                         3'b011:
@@ -383,6 +704,12 @@ module Decoder(
 
                             o_imm = {{20{1'b0}}, imm_12};
                             o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
                         3'b100:
@@ -401,6 +728,12 @@ module Decoder(
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
                             o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
                         3'b110:
@@ -419,6 +752,12 @@ module Decoder(
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
                             o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
                         3'b111:
@@ -437,6 +776,12 @@ module Decoder(
 
                             o_imm = {{20{imm_12[11]}}, imm_12};
                             o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
                         
                         3'b001:
@@ -455,6 +800,12 @@ module Decoder(
 
                             o_imm = {{26{1'b0}}, shamt};
                             o_imm_ce = `ReadEnable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
 
                         3'b101:
@@ -475,6 +826,12 @@ module Decoder(
 
                                 o_imm = {{26{1'b0}}, shamt};
                                 o_imm_ce = `ReadEnable;
+
+                                o_mem_re = `ReadDisable;
+                                o_mem_we = `WriteDisable;
+                                o_mem_write_reg = `Non5;
+                                o_mem_data_length = `Non6;
+                                o_mem_data_sign = `SignExtenDisable;
                             end
 
                             else
@@ -493,6 +850,12 @@ module Decoder(
 
                                 o_imm = {{26{1'b0}}, shamt};
                                 o_imm_ce = `ReadEnable;
+
+                                o_mem_re = `ReadDisable;
+                                o_mem_we = `WriteDisable;
+                                o_mem_write_reg = `Non5;
+                                o_mem_data_length = `Non6;
+                                o_mem_data_sign = `SignExtenDisable;
                             end
                         end
 
@@ -512,6 +875,12 @@ module Decoder(
 
                             o_imm = `Non32;
                             o_imm_ce = `ReadDisable;
+
+                            o_mem_re = `ReadDisable;
+                            o_mem_we = `WriteDisable;
+                            o_mem_write_reg = `Non5;
+                            o_mem_data_length = `Non6;
+                            o_mem_data_sign = `SignExtenDisable;
                         end
                     endcase
                 end
@@ -530,6 +899,13 @@ module Decoder(
                         o_write_reg_addr = `Non5;
 
                         o_imm = `Non32;
+                        o_imm_ce = `ReadDisable;
+
+                        o_mem_re = `ReadDisable;
+                        o_mem_we = `WriteDisable;
+                        o_mem_write_reg = `Non5;
+                        o_mem_data_length = `Non6;
+                        o_mem_data_sign = `SignExtenDisable;
                     end
             endcase
 

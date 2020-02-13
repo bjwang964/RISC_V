@@ -28,9 +28,9 @@ module PC_ROM(
     output reg `AddrBus PC
     );
 
-    always@ (posedge clk or negedge reset)
+    always@ (posedge clk or posedge reset)
     begin
-        if(!reset)
+        if(reset)
         begin
             PC = 0;
         end

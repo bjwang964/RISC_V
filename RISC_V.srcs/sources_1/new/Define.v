@@ -12,7 +12,8 @@
 `define ReadDisable         1'b0
 `define WriteEnable         1'b1
 `define WriteDisable        1'b0
-
+`define SignExtenEnable     1'b1
+`define SignExtenDisable    1'b0
 //总线宽度
 `define AddrBus             [7:0]
 `define DataBus             [31:0]
@@ -29,6 +30,7 @@
 `define Non32				32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 `define Non5				5'bzzzzz
 `define Non16				16'bzzzzzzzzzzzzzzzz
+`define Non6                6'bzzzzzz
 
 
 //OPCODE
@@ -57,3 +59,8 @@
 
 `define Compare                 4'b1010
 `define CompareU                4'b1011
+
+//数据长度
+`define Byte                6'b001000
+`define HalfWord            6'b010000
+`define Word                6'b100000
