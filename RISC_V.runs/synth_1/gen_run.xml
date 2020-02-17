@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1581504515">
+<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1581936495">
   <File Type="PA-TCL" Name="Pipeline.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Pipeline_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Pipeline_reports.tcl"/>
   <File Type="RDS-RDS" Name="Pipeline.vds"/>
   <File Type="RDS-UTIL" Name="Pipeline_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Pipeline_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Pipeline.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Pipeline_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Pipeline_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ADD1.v">
@@ -202,6 +205,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ROM_8"/>
   <BlockFileSet Type="BlockSrcs" Name="RAM32"/>
+  <BlockFileSet Type="BlockSrcs" Name="ROM_8"/>
 </GenRun>

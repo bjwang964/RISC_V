@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/q1109/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2080-LAPTOP-AEDG5TQK/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tfgg484-2
@@ -58,11 +60,11 @@ read_verilog -library xil_defaultlib {
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v
 }
-read_ip -quiet C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci
-set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8_ooc.xdc]
-
 read_ip -quiet C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/RAM32.xci
 set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/RAM32_ooc.xdc]
+
+read_ip -quiet C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci
+set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

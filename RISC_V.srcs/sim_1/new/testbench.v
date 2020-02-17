@@ -27,19 +27,21 @@ module testbench(
 
    reg clk;
     reg reset;
-    wire o_clk;
+    wire o_reg_ce;
+    wire `RegBus o_reg_addr;
+    wire `DataBus o_reg_data;
     
     Pipeline Pipeline0
     (
         clk, reset,
-        o_clk
+        o_reg_ce, o_reg_addr, o_reg_data
     );
     
     initial 
     begin
-        reset = 0; #5 reset = ~reset;#5 reset = ~reset;
-        #5 clk = 0;
-        forever #5 clk = ~clk;
+        reset = 0; #50 reset = ~reset;#50 reset = ~reset;
+        #50 clk = 0;
+        forever #50 clk = ~clk;
     end
     
 

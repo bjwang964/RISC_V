@@ -25,7 +25,9 @@ module Pipeline(
         input clk,
         input reset,
 
-        output o_clk
+        output o_reg_ce,
+        output `RegBus o_reg_addr,
+        output `DataBus o_reg_data
     );
 
     wire finish;
@@ -51,9 +53,9 @@ module Pipeline(
 
 /***************decode***************/
 
-    wire wb_id_reg_ce;
-    wire `RegBus wb_id_reg_addr;
-    wire `DataBus wb_id_reg_data;
+  (*keep = "true"*)  wire wb_id_reg_ce;
+  (*keep = "true"*)  wire `RegBus wb_id_reg_addr;
+  (*keep = "true"*) wire `DataBus wb_id_reg_data;
 
     ///////////////////in
     wire `UnitBus id_ex_in_Unit;
@@ -89,10 +91,28 @@ module Pipeline(
     wire [5:0] id_ex_out_mem_data_length;
     wire id_ex_out_mem_data_sign;
 
+   (*keep = "true"*) wire ex_dec_push_reg_ce = ex_mem_in_write_reg_ce;
+    (*keep = "true"*)wire `RegBus ex_dec_push_reg_addr = ex_mem_in_write_reg_addr;
+    (*keep = "true"*)wire `DataBus ex_dec_push_reg_data = ex_mem_in_res;
+
+   (*keep = "true"*) wire mem_dec_push_reg_ce = mem_wb_in_reg_en;
+    (*keep = "true"*)wire `RegBus mem_dec_push_reg_addr = mem_wb_in_reg_addr;
+    (*keep = "true"*)wire `DataBus mem_dec_push_reg_data = (mem_wb_in_mem_en == 1'b1)?mem_wb_in_mem_data:
+                                            mem_wb_in_ex_res;
+
+    (*keep = "true"*) wire wb_dec_push_reg_ce = wb_id_reg_ce;
+    (*keep = "true"*)wire `RegBus wb_dec_push_reg_addr = wb_id_reg_addr;
+    (*keep = "true"*)wire `DataBus wb_dec_push_reg_data = wb_id_reg_data;
+    
+
     Instr_Decode ID
     (
-        reset, if_id_out_instr,
+        clk, reset, if_id_out_instr,
         wb_id_reg_ce, wb_id_reg_addr,wb_id_reg_data,
+
+        ex_dec_push_reg_ce, ex_dec_push_reg_addr, ex_dec_push_reg_data,
+        mem_dec_push_reg_ce, mem_dec_push_reg_addr, mem_dec_push_reg_data,
+        wb_dec_push_reg_ce, wb_dec_push_reg_addr, wb_dec_push_reg_data, 
 
         id_ex_in_Unit, id_ex_in_Operate, 
         id_ex_in_operand_1,id_ex_in_operand_2, id_ex_in_operand_3,
@@ -119,7 +139,7 @@ module Pipeline(
 /***************execute***************/
 
     /////////////in
-    wire `DataBus ex_mem_in_res;
+  (*keep = "true"*)  wire `DataBus ex_mem_in_res;
     wire ex_mem_in_write_reg_ce;
     wire `RegBus ex_mem_in_write_reg_addr;
 
@@ -217,7 +237,9 @@ module Pipeline(
         wb_id_reg_ce, wb_id_reg_addr, wb_id_reg_data
     );
 
-
+    assign o_reg_ce = wb_id_reg_ce;
+    assign o_reg_addr = wb_id_reg_addr;
+    assign o_reg_data = wb_id_reg_data;
 
 
 endmodule

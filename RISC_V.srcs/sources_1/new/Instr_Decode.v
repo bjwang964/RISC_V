@@ -22,6 +22,7 @@
 
 
 module Instr_Decode(
+        input clk,
         input reset,
 
         input `InstrBus i_Instr,
@@ -29,6 +30,18 @@ module Instr_Decode(
         input i_write_reg_ce,
         input `RegBus i_write_reg_addr,
         input `DataBus i_write_reg_data,
+
+        input i_ex_push_reg_ce,
+        input `RegBus i_ex_push_reg_addr,
+        input `DataBus i_ex_push_reg_data,
+
+        input i_mem_push_reg_ce,
+        input `RegBus i_mem_push_reg_addr,
+        input `DataBus i_mem_push_reg_data,
+
+        input i_wb_push_reg_ce,
+        input `RegBus i_wb_push_reg_addr,
+        input `DataBus i_wb_push_reg_data,
 
         output `UnitBus o_Unit,
         output `OpBus   o_Operate,
@@ -52,8 +65,8 @@ module Instr_Decode(
     wire dec_reg_opger_regre2;
 
     //¼Ä´æÆ÷µØÖ·
-    wire `RegBus dec_reg_raddr1;
-    wire `RegBus dec_reg_raddr2;
+   (*keep = "true"*) wire `RegBus dec_reg_raddr1;
+   (*keep = "true"*) wire `RegBus dec_reg_raddr2;
     
     //¼Ä´æÆ÷Êı¾İ
     wire `DataBus reg_opger_data1;
@@ -77,10 +90,13 @@ module Instr_Decode(
     );
 
     register register0(
-        reset,
+        clk, reset,
         dec_reg_opger_regre1, dec_reg_raddr1,reg_opger_data1,
         dec_reg_opger_regre2, dec_reg_raddr2,reg_opger_data2,
         i_write_reg_ce, i_write_reg_addr, i_write_reg_data,
+        i_ex_push_reg_ce, i_ex_push_reg_addr, i_ex_push_reg_data,
+        i_mem_push_reg_ce, i_mem_push_reg_addr, i_mem_push_reg_data,
+        i_wb_push_reg_ce, i_wb_push_reg_addr, i_wb_push_reg_data,
         o_mem_we, dec_reg_mem_addr, o_mem_write_data
     );
 
