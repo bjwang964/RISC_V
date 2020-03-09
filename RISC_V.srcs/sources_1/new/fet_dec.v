@@ -25,16 +25,25 @@ module fet_dec(
         input clk,
         input clken,
 
-        input `DataBus i_Instr,
-
-        output reg `DataBus o_Instr
+        input [31:0] i_instr,
+    input [19:0] i_cur_pc,
+    input [19:0] i_pre_des,
+    input i_pre_jum_en,
+    
+    output reg [31:0] o_instr,
+    output reg [19:0] o_cur_pc,
+    output reg [19:0] o_pre_des,
+    output reg o_pre_jum_en
     );
 
     always @ (posedge clk)
     begin
         if(clken == 1'b1)
         begin
-            o_Instr = i_Instr;
+           o_instr = i_instr;
+        o_cur_pc = i_cur_pc;
+        o_pre_des = i_pre_des;
+        o_pre_jum_en = i_pre_jum_en;
         end
     end
 endmodule

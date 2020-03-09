@@ -11,21 +11,25 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="457667fs"></ZoomStartTime>
-      <ZoomEndTime time="1161668fs"></ZoomEndTime>
-      <Cursor1Time time="870167fs"></Cursor1Time>
+      <ZoomStartTime time="14802000fs"></ZoomStartTime>
+      <ZoomEndTime time="16290001fs"></ZoomEndTime>
+      <Cursor1Time time="6804000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="292"></NameColumnWidth>
-      <ValueColumnWidth column_width="105"></ValueColumnWidth>
+      <NameColumnWidth column_width="245"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
    <wave_markers>
-      <marker time="20000" label="" />
-      <marker time="30000" label="" />
-      <marker time="50000" label="" />
-      <marker time="40000" label="" />
-      <marker time="243320" label="" />
+      <marker time="8345000" label="" />
+      <marker time="9601000" label="" />
+      <marker time="10727000" label="" />
+      <marker time="12311000" label="" />
+      <marker time="13499000" label="" />
+      <marker time="14645000" label="" />
+      <marker time="4504000" label="" />
+      <marker time="5754000" label="" />
+      <marker time="6804000" label="" />
    </wave_markers>
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -39,24 +43,72 @@
       <obj_property name="label">IF</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/testbench/Pipeline0/if_id_in_instr" type="array">
-         <obj_property name="ElementShortName">if_id_in_instr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">if_id_in_instr[31:0]</obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/i_instr" type="array">
+         <obj_property name="ElementShortName">i_instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i_instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/i_pc" type="array">
+         <obj_property name="ElementShortName">i_pc[19:0]</obj_property>
+         <obj_property name="ObjectShortName">i_pc[19:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/upstate" type="logic">
+         <obj_property name="ElementShortName">upstate</obj_property>
+         <obj_property name="ObjectShortName">upstate</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/updes" type="logic">
+         <obj_property name="ElementShortName">updes</obj_property>
+         <obj_property name="ObjectShortName">updes</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/uppc" type="logic">
+         <obj_property name="ElementShortName">uppc</obj_property>
+         <obj_property name="ObjectShortName">uppc</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/pre_pc" type="array">
+         <obj_property name="ElementShortName">pre_pc[19:0]</obj_property>
+         <obj_property name="ObjectShortName">pre_pc[19:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/i_pre_des" type="array">
+         <obj_property name="ElementShortName">i_pre_des[19:0]</obj_property>
+         <obj_property name="ObjectShortName">i_pre_des[19:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/act_des" type="array">
+         <obj_property name="ElementShortName">act_des[19:0]</obj_property>
+         <obj_property name="ObjectShortName">act_des[19:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/i_pre_jum_en" type="logic">
+         <obj_property name="ElementShortName">i_pre_jum_en</obj_property>
+         <obj_property name="ObjectShortName">i_pre_jum_en</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/act_jum_en" type="logic">
+         <obj_property name="ElementShortName">act_jum_en</obj_property>
+         <obj_property name="ObjectShortName">act_jum_en</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ID/register0/t2" type="array">
+         <obj_property name="ElementShortName">t2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">t2[31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group5" type="group">
       <obj_property name="label">ID</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_Unit" type="array">
-         <obj_property name="ElementShortName">id_ex_in_Unit[2:0]</obj_property>
-         <obj_property name="ObjectShortName">id_ex_in_Unit[2:0]</obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/ID/dec_reg_raddr1" type="array">
+         <obj_property name="ElementShortName">dec_reg_raddr1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">dec_reg_raddr1[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_Operate" type="array">
-         <obj_property name="ElementShortName">id_ex_in_Operate[3:0]</obj_property>
-         <obj_property name="ObjectShortName">id_ex_in_Operate[3:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FF00</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/testbench/Pipeline0/ID/dec_reg_raddr2" type="array">
+         <obj_property name="ElementShortName">dec_reg_raddr2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">dec_reg_raddr2[4:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/Pipeline0/id_ex_in_operand_1" type="array">
          <obj_property name="ElementShortName">id_ex_in_operand_1[31:0]</obj_property>
@@ -90,10 +142,6 @@
          <obj_property name="ElementShortName">id_ex_in_write_reg_addr[4:0]</obj_property>
          <obj_property name="ObjectShortName">id_ex_in_write_reg_addr[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_re" type="logic">
-         <obj_property name="ElementShortName">id_ex_in_mem_re</obj_property>
-         <obj_property name="ObjectShortName">id_ex_in_mem_re</obj_property>
-      </wvobject>
       <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_we" type="logic">
          <obj_property name="ElementShortName">id_ex_in_mem_we</obj_property>
          <obj_property name="ObjectShortName">id_ex_in_mem_we</obj_property>
@@ -101,10 +149,6 @@
       <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_write_data" type="array">
          <obj_property name="ElementShortName">id_ex_in_mem_write_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">id_ex_in_mem_write_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/id_ex_in_mem_data_length" type="array">
-         <obj_property name="ElementShortName">id_ex_in_mem_data_length[5:0]</obj_property>
-         <obj_property name="ObjectShortName">id_ex_in_mem_data_length[5:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_ce" type="logic">
          <obj_property name="ElementShortName">ex_dec_push_reg_ce</obj_property>
@@ -194,6 +238,10 @@
       <wvobject fp_name="/testbench/Pipeline0/wb_id_reg_ce" type="logic">
          <obj_property name="ElementShortName">wb_id_reg_ce</obj_property>
          <obj_property name="ObjectShortName">wb_id_reg_ce</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ID/register0/tt2" type="array">
+         <obj_property name="ElementShortName">tt2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tt2[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

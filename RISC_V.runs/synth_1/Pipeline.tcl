@@ -17,10 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/q1109/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2080-LAPTOP-AEDG5TQK/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tfgg484-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -43,19 +39,26 @@ read_verilog -library xil_defaultlib {
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Define.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/BTB.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v
-  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC_ROM.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v
+  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/pc_sel.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v
   C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v

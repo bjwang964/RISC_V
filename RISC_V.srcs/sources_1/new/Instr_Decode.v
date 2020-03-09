@@ -25,7 +25,10 @@ module Instr_Decode(
         input clk,
         input reset,
 
-        input `InstrBus i_Instr,
+        input [31:0] instr,
+        input [19:0] cur_pc,
+        input [19:0] pre_des,
+        input pre_jum_en,
 
         input i_write_reg_ce,
         input `RegBus i_write_reg_addr,
@@ -57,7 +60,14 @@ module Instr_Decode(
         output o_mem_we,
         output `DataBus o_mem_write_data,
         output [5:0] o_mem_data_length,
-        output o_mem_data_sign
+        output o_mem_data_sign,
+        
+        output upstate,
+        output updes,
+        output uppc,
+        output [19:0] pre_pc,
+        output [19:0] act_des,
+        output act_jum_en
     );
 
     //寄存器使能
@@ -69,8 +79,8 @@ module Instr_Decode(
    (*keep = "true"*) wire `RegBus dec_reg_raddr2;
     
     //寄存器数据
-    wire `DataBus reg_opger_data1;
-    wire `DataBus reg_opger_data2;
+   (*keep = "true"*) wire `DataBus reg_opger_data1;
+   (*keep = "true"*) wire `DataBus reg_opger_data2;
 
     //立即数
     wire dec_opger_immre;
@@ -81,7 +91,7 @@ module Instr_Decode(
     
     Decoder Decoder0(
         reset, 
-        i_Instr,
+        instr,
         o_Unit, o_Operate, 
         dec_reg_opger_regre1, dec_reg_opger_regre2, o_write_reg_ce,
         dec_reg_raddr1, dec_reg_raddr2, o_write_reg_addr,
@@ -91,6 +101,8 @@ module Instr_Decode(
 
     register register0(
         clk, reset,
+        instr, cur_pc, pre_des, pre_jum_en, upstate, 
+        updes, uppc, pre_pc, act_des, act_jum_en,
         dec_reg_opger_regre1, dec_reg_raddr1,reg_opger_data1,
         dec_reg_opger_regre2, dec_reg_raddr2,reg_opger_data2,
         i_write_reg_ce, i_write_reg_addr, i_write_reg_data,

@@ -24,14 +24,28 @@
 module register(
         input clk,
         input reset,
+        
+        
+        
+    input [31:0] instr,
+    input [19:0] cur_pc,
+    input [19:0] pre_des,
+    input pre_jum_en,
+    
+    output reg upstate,
+    output reg updes,
+    output reg uppc,
+    output [19:0] pre_pc,
+    output reg [19:0] act_des,
+    output reg act_jum_en,
 
         input re_1,
         input `RegBus read_addr_1,
-        output reg `DataBus rdata_1,
+         output `DataBus rdata_1,
 
         input re_2,
-        input `RegBus read_addr_2,
-        output reg `DataBus rdata_2,
+       input `RegBus read_addr_2,
+        output `DataBus rdata_2,
 
         input we,
         input `RegBus write_addr,
@@ -52,11 +66,28 @@ module register(
 
         input mem_we,
         input `RegBus mem_reg_addr,
-        output reg `DataBus mem_data
+        output `DataBus mem_data
     );
 
      reg `DataBus Regsiter [31:0];
-
+reg mark;
+(*keep = "true"*) wire `DataBus tt0 = Regsiter[10];
+    (*keep = "true"*) wire `DataBus tt1 = Regsiter[11];
+    (*keep = "true"*) wire `DataBus tt2 = Regsiter[12];
+    reg `DataBus t1;
+    reg `DataBus t2;
+    
+    
+    (*keep = "true"*) wire `DataBus t_reg_addr1 = read_addr_1;
+    (*keep = "true"*) wire `DataBus t_reg_addr2 = read_addr_2;
+    
+    //assign tt1 = t1;
+    
+    wire [4:0] rs1 = instr[19:15];
+    wire [4:0] rs2 = instr[24:20];
+    wire [11:0] imm = {instr[31], instr[7], instr[30:25], instr[11:8]};
+    assign pre_pc = cur_pc;
+    
       always @ (posedge clk or posedge reset)
       begin
             if(reset == `ResetEnable)
@@ -93,6 +124,11 @@ module register(
               Regsiter[29] = 32'h0000001d;
               Regsiter[30] = 32'h0000001e;
               Regsiter[31] = 32'h0000001f;
+              
+              
+              
+              
+              
             end
 
             else
@@ -109,123 +145,174 @@ module register(
       begin
           if(reset == `ResetEnable)
           begin
-              rdata_1 = `Non32;
-              rdata_2 = `Non32;
-              mem_data = `Non32;
+              upstate = 1'b0;
+                  updes = 1'b0;
+                  act_jum_en = 0;
+                  act_des = 20'hzzzzz;
+                  uppc = 1'b0;
+                  
+//                  rdata_1 = `Non32;
+//              rdata_2 = `Non32;
+//              mem_data = `Non32;
           end
 
           else
           begin
-              if(re_1 == `ReadEnable)
-              begin
-
-                    if(read_addr_1 == i_ex_push_reg_addr)
+          
+           case (instr[6:0])
+            7'b1100011:
+            begin
+                case(instr[14:12])
+                    3'b000://beq
                     begin
-                        if(i_ex_push_reg_ce == `WriteEnable)
+                        upstate = 1'b1;
+                        updes = 1'b1;
+                        
+                        if(rs1 == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)
                         begin
-                            rdata_1 = i_ex_push_reg_data;
+                            t1 = i_ex_push_reg_data;
                         end
-                    end
-
-                    else if(read_addr_1 == i_mem_push_reg_addr)
-                    begin
-                        if(i_mem_push_reg_ce == `WriteEnable)
+                        else if (rs1 == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)
                         begin
-                            rdata_1 = i_ex_push_reg_data;
+                            t1 = i_mem_push_reg_data;
                         end
-                    end
-
-                    else if(read_addr_1 == i_wb_push_reg_addr)
-                    begin
-                        if(i_wb_push_reg_ce == `WriteEnable)
+                        else if (rs1 == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)
                         begin
-                            rdata_1 = i_wb_push_reg_data;
+                            t1 = i_wb_push_reg_data;
                         end
+                        else
+                        begin
+                            t1 = Regsiter[rs1];
+                        end
+                        
+                        if(rs2 == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)
+                        begin
+                            t2 = i_ex_push_reg_data;
+                        end
+                        else if (rs2 == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)
+                        begin
+                            t2 = i_mem_push_reg_data;
+                        end
+                        else if (rs2 == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)
+                        begin
+                            t2 = i_wb_push_reg_data;
+                        end
+                        else
+                        begin
+                            t2 = Regsiter[rs2];
+                        end
+                        
+                        
+                        act_jum_en = (t1==t2)? 1:0;
+                        act_des = (act_jum_en == 1'b1)?(cur_pc + {{7{imm[11]}}, imm, {1'b0}}):(cur_pc + 4);
+                        uppc = (pre_jum_en == act_jum_en)? 
+                        (pre_des == act_des) ?0:1 :1;
                     end
                     
-                    else
+                    3'b100://blt
                     begin
-                        rdata_1 = Regsiter[read_addr_1];
-                    end
-              end
-              else
-              begin
-                  rdata_1 = `Non32;
-              end
-
-
-              if(re_2 == `ReadEnable)
-              begin
-                    if(read_addr_2 == i_ex_push_reg_addr)
-                    begin
-                        if(i_ex_push_reg_ce == `WriteEnable)
+                        upstate = 1'b1;
+                        updes = 1'b1;
+                        
+                        if(rs1 == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)
                         begin
-                            rdata_2 = i_ex_push_reg_data;
+                            t1 = i_ex_push_reg_data;
                         end
-                    end
-                    else if(read_addr_2 == i_mem_push_reg_addr)
-                    begin
-                        if(i_mem_push_reg_ce == `WriteEnable)
+                        else if (rs1 == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)
                         begin
-                            rdata_2 = i_mem_push_reg_data;
+                            t1 = i_mem_push_reg_data;
                         end
-                    end
-
-                    else if(read_addr_2 == i_wb_push_reg_addr)
-                    begin
-                        if(i_wb_push_reg_ce == `WriteEnable)
+                        else if (rs1 == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)
                         begin
-                            rdata_2 = i_wb_push_reg_data;
+                            t1 = i_wb_push_reg_data;
                         end
+                        else
+                        begin
+                            t1 = Regsiter[rs1];
+                        end
+                        
+                        if(rs2 == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)
+                        begin
+                            t2 = i_ex_push_reg_data;
+                        end
+                        else if (rs2 == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)
+                        begin
+                            t1 = i_mem_push_reg_data;
+                        end
+                        else if (rs2 == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)
+                        begin
+                            t2 = i_wb_push_reg_data;
+                        end
+                        else
+                        begin
+                            t2 = Regsiter[rs2];
+                        end
+                        
+                        
+                        act_jum_en = (t1<t2)? 1:0;
+                        act_des = (act_jum_en == 1'b1)?(cur_pc + {{7{imm[11]}}, imm, {1'b0}}):(cur_pc + 4);
+                        uppc = (pre_jum_en == act_jum_en)? 
+                        (pre_des == act_des) ?0:1 :1;
                     end
-
-
-
-                    else
+                   
+                    default:
                     begin
-                        rdata_2 = Regsiter[read_addr_2];
+                        upstate = 1'b0;
+                        updes = 1'b0;
+                        act_jum_en = 0;
+                        act_des = 20'hzzzzz;
+                        uppc = 1'b0;
                     end
+                endcase
+            end
+            7'b0000000:
+            begin
+                    upstate = 1'b0;
+                        updes = 1'b0;
+                        act_jum_en = 0;
+                        act_des = 20'hzzzzz;
+                        uppc = 1'b0;
+            end
+            default:
+             begin
+                  upstate = 1'b0;
+                  updes = 1'b0;
+                  act_jum_en = 0;
+                  act_des = 20'hzzzzz;
+                  uppc = 1'b0;
               end
-              else
-              begin
-                  rdata_2 = `Non32;
-              end
+            
+            
+        
+        
+        
+        
+        endcase
+       end
+     end
 
-              if(mem_we == `ReadEnable)
-              begin
-                    if(mem_reg_addr == i_ex_push_reg_addr)
-                    begin
-                        if(i_ex_push_reg_ce == `WriteEnable)
-                        begin
-                            mem_data = i_ex_push_reg_data;
-                        end
-                    end
-                    else if(mem_reg_addr == i_mem_push_reg_addr)
-                    begin
-                        if(i_mem_push_reg_ce == `WriteEnable)
-                        begin
-                            mem_data = i_mem_push_reg_data;
-                        end
-                    end
+////*********************************************************************////
 
-                    else if(mem_reg_addr == i_wb_push_reg_addr)
-                    begin
-                        if(i_wb_push_reg_ce == `WriteEnable)
-                        begin
-                            mem_data = i_wb_push_reg_data;
-                        end
-                    end
+    assign rdata_1 = (re_1 == `ReadEnable)?
+                    (read_addr_1 == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)?i_ex_push_reg_data:
+                    (read_addr_1 == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)?i_mem_push_reg_data:
+                    (read_addr_1 == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)?i_wb_push_reg_data:
+                   Regsiter[read_addr_1]:
+                    `Non32;
+                    
+   assign rdata_2 = (re_2 == `ReadEnable)?
+                    (read_addr_2 == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)?i_ex_push_reg_data:
+                    (read_addr_2 == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)?i_mem_push_reg_data:
+                    (read_addr_2 == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)?i_wb_push_reg_data:
+                   Regsiter[read_addr_2]:
+                    `Non32;
+                    
+    assign mem_data = (mem_we == `ReadEnable)?
+                    (mem_reg_addr == i_ex_push_reg_addr && i_ex_push_reg_ce == `WriteEnable)?i_ex_push_reg_data:
+                    (mem_reg_addr == i_mem_push_reg_addr && i_mem_push_reg_ce == `WriteEnable)?i_mem_push_reg_data:
+                    (mem_reg_addr == i_wb_push_reg_addr && i_wb_push_reg_ce == `WriteEnable)?i_wb_push_reg_data:
+                    Regsiter[mem_reg_addr]:
+                    `Non32;
 
 
-                    else
-                    begin
-                        mem_data = Regsiter[mem_reg_addr];
-                    end
-              end
-              else
-              begin
-                  mem_data = `Non32;
-              end
-          end
-      end
 endmodule

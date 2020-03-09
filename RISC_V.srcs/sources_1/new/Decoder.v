@@ -24,7 +24,7 @@
 module Decoder(
         input reset,
 
-        input `InstrBus i_Instr,
+        input [31:0] i_Instr,
 
         //Ö´ÐÐ¿ØÖÆ
         output reg `UnitBus o_Unit,
@@ -51,6 +51,7 @@ module Decoder(
         output reg `RegBus o_mem_write_reg,
         output reg [5:0] o_mem_data_length,
         output reg o_mem_data_sign
+        
 
     );
 
@@ -92,6 +93,7 @@ module Decoder(
             o_mem_write_reg = `Non5;
             o_mem_data_length = `Non6;
             o_mem_data_sign = `SignExtenDisable;
+            
         end
 
         else

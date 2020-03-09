@@ -38,17 +38,40 @@ module Pipeline(
 
     wire `DataBus if_id_in_instr;
     wire `DataBus if_id_out_instr;
+    
+    (* DONT_TOUCH= "true" *) wire upstate;
+   (* DONT_TOUCH= "true" *) wire updes;
+   (* DONT_TOUCH= "true" *) wire uppc;
+   (* DONT_TOUCH= "true" *) wire [19:0] pre_pc;
+   (* DONT_TOUCH= "true" *) wire [19:0] act_des;
+   (* DONT_TOUCH= "true" *) wire act_jum_en;
+    
+   (* DONT_TOUCH= "true" *) wire [31:0] i_instr;
+   (* DONT_TOUCH= "true" *) wire [19:0] i_pc;
+   (* DONT_TOUCH= "true" *) wire [19:0] i_pre_des;
+   (* DONT_TOUCH= "true" *) wire i_pre_jum_en;
+    
+   (* DONT_TOUCH= "true" *) wire [31:0] o_instr;
+   (* DONT_TOUCH= "true" *) wire [31:0] d_instr;
+   (* DONT_TOUCH= "true" *) wire [19:0] o_pc;
+   (* DONT_TOUCH= "true" *) wire [19:0] o_pre_des;
+   (* DONT_TOUCH= "true" *) wire o_pre_jum_en;
+   
+   (* DONT_TOUCH= "true" *) wire instr_v;
+    assign d_instr = (instr_v == 1'b1)?o_instr:32'h00000000;
 
     Instr_Fetch IF
     (
         clk, reset, finish,
-        if_id_in_instr
+        upstate, updes, uppc, pre_pc, act_des, act_jum_en, 
+        i_instr, i_pc,i_pre_des, i_pre_jum_en
     );
 
     fet_dec fd
     (
-        clk, finish, if_id_in_instr,
-        if_id_out_instr
+        clk, finish,
+         i_instr, i_pc,i_pre_des, i_pre_jum_en,
+        o_instr, o_pc,o_pre_des, o_pre_jum_en
     );
 
 /***************decode***************/
@@ -66,7 +89,7 @@ module Pipeline(
     wire `DataBus id_ex_in_operand_3;
 
     wire id_ex_in_write_reg_ce;
-    wire `RegBus id_ex_in_write_reg_addr;
+   (*keep = "true"*) wire `RegBus id_ex_in_write_reg_addr;
 
     wire id_ex_in_mem_re;
     wire id_ex_in_mem_we;
@@ -107,7 +130,9 @@ module Pipeline(
 
     Instr_Decode ID
     (
-        clk, reset, if_id_out_instr,
+        clk, reset, 
+        d_instr, o_pc,o_pre_des, o_pre_jum_en,
+        
         wb_id_reg_ce, wb_id_reg_addr,wb_id_reg_data,
 
         ex_dec_push_reg_ce, ex_dec_push_reg_addr, ex_dec_push_reg_data,
@@ -117,9 +142,14 @@ module Pipeline(
         id_ex_in_Unit, id_ex_in_Operate, 
         id_ex_in_operand_1,id_ex_in_operand_2, id_ex_in_operand_3,
         id_ex_in_write_reg_ce, id_ex_in_write_reg_addr, 
-        id_ex_in_mem_re, id_ex_in_mem_we, id_ex_in_mem_write_data, id_ex_in_mem_data_length, id_ex_in_mem_data_sign
+        id_ex_in_mem_re, id_ex_in_mem_we, id_ex_in_mem_write_data, id_ex_in_mem_data_length, id_ex_in_mem_data_sign,
+        
+        upstate, updes, uppc, pre_pc, act_des, act_jum_en
     );
-
+(* DONT_TOUCH= "true" *) ins_val iv(
+        clk, finish, reset, uppc,
+        instr_v
+    );
 
     de_ex de
     (
