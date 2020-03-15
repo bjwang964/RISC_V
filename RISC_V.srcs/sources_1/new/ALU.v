@@ -77,6 +77,11 @@ module ALU(
             begin
                 o_result = i_operand_1 & i_operand_2;
             end
+
+            `Empty:
+            begin
+                o_result = i_operand_1;
+            end
             
             default: 
             begin

@@ -80,6 +80,10 @@ module Pipeline(
   (*keep = "true"*)  wire `RegBus wb_id_reg_addr;
   (*keep = "true"*) wire `DataBus wb_id_reg_data;
 
+  wire wb_id_csr_ce;
+  wire [11:0] wb_id_csr_addr;
+  wire `DataBus wb_id_csr_data;
+
     ///////////////////in
     wire `UnitBus id_ex_in_Unit;
     wire `OpBus   id_ex_in_Operate;
@@ -96,6 +100,10 @@ module Pipeline(
     wire `DataBus id_ex_in_mem_write_data;
     wire [5:0] id_ex_in_mem_data_length;
     wire id_ex_in_mem_data_sign;
+
+    wire id_ex_in_csr_we;
+    wire [11:0] id_ex_in_csr_write_addr;
+    wire `DataBus id_ex_in_csr_rdata;
 
     ///////////////////out
     wire `UnitBus id_ex_out_Unit;
@@ -114,18 +122,53 @@ module Pipeline(
     wire [5:0] id_ex_out_mem_data_length;
     wire id_ex_out_mem_data_sign;
 
-   (*keep = "true"*) wire ex_dec_push_reg_ce = ex_mem_in_write_reg_ce;
+   (*keep = "true"*) wire ex_dec_push_reg_ce = ex_mem_in_write_reg_ce; 
+   //assign ex_dec_push_reg_ce = ex_mem_in_write_reg_ce;
     (*keep = "true"*)wire `RegBus ex_dec_push_reg_addr = ex_mem_in_write_reg_addr;
+    //assign ex_dec_push_reg_addr = ex_mem_in_write_reg_addr;
     (*keep = "true"*)wire `DataBus ex_dec_push_reg_data = ex_mem_in_res;
+    //assign ex_dec_push_reg_data = ex_mem_in_res;
 
    (*keep = "true"*) wire mem_dec_push_reg_ce = mem_wb_in_reg_en;
+   //assign mem_dec_push_reg_ce = mem_wb_in_reg_en;
     (*keep = "true"*)wire `RegBus mem_dec_push_reg_addr = mem_wb_in_reg_addr;
+    //assign mem_dec_push_reg_addr = mem_wb_in_reg_addr;
     (*keep = "true"*)wire `DataBus mem_dec_push_reg_data = (mem_wb_in_mem_en == 1'b1)?mem_wb_in_mem_data:
-                                            mem_wb_in_ex_res;
+                                            mem_wb_in_ex_res; 
+    //assign mem_dec_push_reg_data = (mem_wb_in_mem_en == 1'b1)?mem_wb_in_mem_data:
+     //                                       mem_wb_in_ex_res;
 
     (*keep = "true"*) wire wb_dec_push_reg_ce = wb_id_reg_ce;
+    //assign wb_dec_push_reg_ce = wb_id_reg_ce;
     (*keep = "true"*)wire `RegBus wb_dec_push_reg_addr = wb_id_reg_addr;
+    //assign wb_dec_push_reg_addr = wb_id_reg_addr;
     (*keep = "true"*)wire `DataBus wb_dec_push_reg_data = wb_id_reg_data;
+    //assign wb_dec_push_reg_data = wb_id_reg_data;
+
+    wire id_ex_out_csr_we;
+    wire [11:0] id_ex_out_csr_write_addr;
+    wire `DataBus id_ex_out_csr_rdata;
+
+    (*keep = "true"*) wire ex_dec_push_csr_ce = ex_mem_in_csr_we;
+    //assign ex_dec_push_csr_ce = ex_mem_in_csr_we;
+    (*keep = "true"*)wire [11:0] ex_dec_push_csr_addr = ex_mem_in_csr_write_addr;
+    //assign ex_dec_push_csr_addr = ex_mem_in_csr_write_addr;
+    (*keep = "true"*)wire `DataBus ex_dec_push_csr_data = ex_mem_in_res;
+    //assign ex_dec_push_csr_data = ex_mem_in_res;
+
+   (*keep = "true"*) wire mem_dec_push_csr_ce = mem_wb_in_csr_we;
+   //assign mem_dec_push_csr_ce = mem_wb_in_csr_we;
+    (*keep = "true"*)wire [11:0] mem_dec_push_csr_addr = mem_wb_in_csr_write_addr;
+    //assign mem_dec_push_csr_addr = mem_wb_in_csr_write_addr;
+    (*keep = "true"*)wire `DataBus mem_dec_push_csr_data = mem_wb_in_ex_res;
+    //assign mem_dec_push_csr_data = mem_wb_in_ex_res;
+
+    (*keep = "true"*) wire wb_dec_push_csr_ce = wb_id_csr_ce;
+    //assign wb_dec_push_csr_ce = wb_id_csr_ce;
+    (*keep = "true"*)wire [11:0] wb_dec_push_csr_addr = wb_id_csr_addr;
+    //assign wb_dec_push_csr_addr = wb_id_csr_addr;
+    (*keep = "true"*)wire `DataBus wb_dec_push_csr_data = wb_id_csr_data;
+    //assign wb_dec_push_csr_data = wb_id_csr_data;
     
 
     Instr_Decode ID
@@ -139,12 +182,18 @@ module Pipeline(
         mem_dec_push_reg_ce, mem_dec_push_reg_addr, mem_dec_push_reg_data,
         wb_dec_push_reg_ce, wb_dec_push_reg_addr, wb_dec_push_reg_data, 
 
+        wb_id_csr_ce, wb_id_csr_addr, wb_id_csr_data, 
+        ex_dec_push_csr_ce, ex_dec_push_csr_addr, ex_dec_push_csr_data, 
+        mem_dec_push_csr_ce, mem_dec_push_csr_addr, mem_dec_push_csr_data, 
+        wb_dec_push_csr_ce, wb_dec_push_csr_addr, wb_dec_push_csr_data,
+
         id_ex_in_Unit, id_ex_in_Operate, 
         id_ex_in_operand_1,id_ex_in_operand_2, id_ex_in_operand_3,
         id_ex_in_write_reg_ce, id_ex_in_write_reg_addr, 
         id_ex_in_mem_re, id_ex_in_mem_we, id_ex_in_mem_write_data, id_ex_in_mem_data_length, id_ex_in_mem_data_sign,
         
-        upstate, updes, uppc, pre_pc, act_des, act_jum_en
+        upstate, updes, uppc, pre_pc, act_des, act_jum_en,
+        id_ex_in_csr_we, id_ex_in_csr_write_addr,id_ex_in_csr_rdata
     );
 (* DONT_TOUCH= "true" *) ins_val iv(
         clk, finish, reset, uppc,
@@ -159,11 +208,13 @@ module Pipeline(
         id_ex_in_operand_1,id_ex_in_operand_2, id_ex_in_operand_3,
         id_ex_in_write_reg_ce, id_ex_in_write_reg_addr, 
         id_ex_in_mem_re, id_ex_in_mem_we, id_ex_in_mem_write_data, id_ex_in_mem_data_length, id_ex_in_mem_data_sign,
+        id_ex_in_csr_we, id_ex_in_csr_write_addr,id_ex_in_csr_rdata,
 
         id_ex_out_Unit, id_ex_out_Operate, 
         id_ex_out_operand_1,id_ex_out_operand_2, id_ex_out_operand_3,
         id_ex_out_write_reg_ce, id_ex_out_write_reg_addr, 
-        id_ex_out_mem_re, id_ex_out_mem_we, id_ex_out_mem_write_data, id_ex_out_mem_data_length, id_ex_out_mem_data_sign
+        id_ex_out_mem_re, id_ex_out_mem_we, id_ex_out_mem_write_data, id_ex_out_mem_data_length, id_ex_out_mem_data_sign,
+        id_ex_out_csr_we, id_ex_out_csr_write_addr,id_ex_out_csr_rdata
     );
 
 /***************execute***************/
@@ -179,6 +230,10 @@ module Pipeline(
     wire [5:0] ex_mem_in_mem_data_length;
     wire ex_mem_in_mem_data_sign;
 
+    wire ex_mem_in_csr_we;
+    wire [11:0] ex_mem_in_csr_write_addr;
+    wire `DataBus ex_mem_in_csr_rdata;
+
 
     /////////////out
     wire `DataBus ex_mem_out_res;
@@ -191,6 +246,10 @@ module Pipeline(
     wire [5:0] ex_mem_out_mem_data_length;
     wire ex_mem_out_mem_data_sign;
 
+    wire ex_mem_out_csr_we;
+    wire [11:0] ex_mem_out_csr_write_addr;
+    wire `DataBus ex_mem_out_csr_rdata;
+
 
     EX EX0
     (
@@ -199,9 +258,11 @@ module Pipeline(
         id_ex_out_operand_1,id_ex_out_operand_2, id_ex_out_operand_3,
         id_ex_out_write_reg_ce, id_ex_out_write_reg_addr, 
         id_ex_out_mem_re, id_ex_out_mem_we, id_ex_out_mem_write_data, id_ex_out_mem_data_length, id_ex_out_mem_data_sign,
+        id_ex_out_csr_we, id_ex_out_csr_write_addr,id_ex_out_csr_rdata,
 
         ex_mem_in_res, ex_mem_in_write_reg_ce, ex_mem_in_write_reg_addr,
-        ex_mem_in_mem_en, ex_mem_in_mem_we, ex_mem_in_mem_write_data, ex_mem_in_mem_data_length, ex_mem_in_mem_data_sign
+        ex_mem_in_mem_en, ex_mem_in_mem_we, ex_mem_in_mem_write_data, ex_mem_in_mem_data_length, ex_mem_in_mem_data_sign,
+        ex_mem_in_csr_we, ex_mem_in_csr_write_addr, ex_mem_in_csr_rdata
     );
 
     ctrl ctrl0
@@ -215,9 +276,11 @@ module Pipeline(
         clk, finish, 
         ex_mem_in_res, ex_mem_in_write_reg_ce, ex_mem_in_write_reg_addr,
         ex_mem_in_mem_en, ex_mem_in_mem_we, ex_mem_in_mem_write_data, ex_mem_in_mem_data_length, ex_mem_in_mem_data_sign,
+        ex_mem_in_csr_we, ex_mem_in_csr_write_addr, ex_mem_in_csr_rdata,
 
         ex_mem_out_res, ex_mem_out_write_reg_ce, ex_mem_out_write_reg_addr,
-        ex_mem_out_mem_en, ex_mem_out_mem_we, ex_mem_out_mem_write_data, ex_mem_out_mem_data_length, ex_mem_out_mem_data_sign
+        ex_mem_out_mem_en, ex_mem_out_mem_we, ex_mem_out_mem_write_data, ex_mem_out_mem_data_length, ex_mem_out_mem_data_sign,
+        ex_mem_out_csr_we, ex_mem_out_csr_write_addr, ex_mem_out_csr_rdata
     );
 
 
@@ -233,30 +296,41 @@ module Pipeline(
 
     wire `DataBus mem_wb_in_mem_data;
 
+    wire mem_wb_in_csr_we;
+    wire [11:0] mem_wb_in_csr_write_addr;
+    wire `DataBus mem_wb_in_csr_rdata;
+
     ////////////////////out
     wire mem_wb_out_reg_en;
     wire mem_wb_out_mem_en;
     wire `RegBus mem_wb_out_reg_addr;
-    wire `DataBus mem_wb_out_ex_res;
+    (* DONT_TOUCH= "true" *)wire `DataBus mem_wb_out_ex_res;
 
     wire `DataBus mem_wb_out_mem_data;
 
-
+    wire mem_wb_out_csr_we;
+    wire [11:0] mem_wb_out_csr_write_addr;
+    wire `DataBus mem_wb_out_csr_rdata;
 
 
     MEM MEM0
     (
         clk, reset,
         ex_mem_out_mem_en, ex_mem_out_mem_we, ex_mem_out_res, ex_mem_out_mem_write_data,ex_mem_out_mem_data_length,
+        ex_mem_out_csr_we, ex_mem_out_csr_write_addr, ex_mem_out_csr_rdata,
 
-        mem_wb_in_mem_data
+        mem_wb_in_mem_data,
+        mem_wb_in_csr_we, mem_wb_in_csr_write_addr, mem_wb_in_csr_rdata
     );
 
     mem_wb mw
     (
         clk, finish,
         mem_wb_in_reg_en, mem_wb_in_mem_en, mem_wb_in_reg_addr, mem_wb_in_ex_res,mem_wb_in_mem_data,
-        mem_wb_out_reg_en, mem_wb_out_mem_en, mem_wb_out_reg_addr, mem_wb_out_ex_res, mem_wb_out_mem_data
+        mem_wb_in_csr_we, mem_wb_in_csr_write_addr, mem_wb_in_csr_rdata,
+
+        mem_wb_out_reg_en, mem_wb_out_mem_en, mem_wb_out_reg_addr, mem_wb_out_ex_res, mem_wb_out_mem_data,
+        mem_wb_out_csr_we, mem_wb_out_csr_write_addr, mem_wb_out_csr_rdata
     );
 
 /***************writeback***************/
@@ -264,7 +338,10 @@ module Pipeline(
     WB WB0
     (
         mem_wb_out_reg_en, mem_wb_out_mem_en, mem_wb_out_reg_addr, mem_wb_out_ex_res, mem_wb_out_mem_data,
-        wb_id_reg_ce, wb_id_reg_addr, wb_id_reg_data
+        mem_wb_out_csr_we, mem_wb_out_csr_write_addr, mem_wb_out_csr_rdata,
+        
+        wb_id_reg_ce, wb_id_reg_addr, wb_id_reg_data,
+        wb_id_csr_ce, wb_id_csr_addr, wb_id_csr_data
     );
 
     assign o_reg_ce = wb_id_reg_ce;

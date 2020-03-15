@@ -39,6 +39,7 @@
 `define Store                7'b0100011
 `define CalcImm               7'b0010011
 `define CalcReg               7'b0110011
+`define CSRop                   7'b1110011
 
 //操作类型
 `define ExeInt                  3'b001
@@ -46,6 +47,8 @@
 `define ExeMul                  3'b011
 
 //操作子类型
+`define Empty                   4'b0000
+
 `define Add                     4'b0001
 `define Sub                     4'b0010
 `define And                     4'b0011

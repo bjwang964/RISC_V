@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="testbench_time_synth.wdb" id="1">
+      <db_ref path="testbench_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="testbench" />
@@ -11,25 +11,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="14802000fs"></ZoomStartTime>
-      <ZoomEndTime time="16290001fs"></ZoomEndTime>
-      <Cursor1Time time="6804000fs"></Cursor1Time>
+      <ZoomStartTime time="14250000fs"></ZoomStartTime>
+      <ZoomEndTime time="21270001fs"></ZoomEndTime>
+      <Cursor1Time time="8800000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="245"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="292"></NameColumnWidth>
+      <ValueColumnWidth column_width="109"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
    <wave_markers>
-      <marker time="8345000" label="" />
-      <marker time="9601000" label="" />
-      <marker time="10727000" label="" />
-      <marker time="12311000" label="" />
-      <marker time="13499000" label="" />
-      <marker time="14645000" label="" />
-      <marker time="4504000" label="" />
-      <marker time="5754000" label="" />
-      <marker time="6804000" label="" />
+      <marker time="4757834" label="" />
+      <marker time="5939834" label="" />
+      <marker time="7044834" label="" />
+      <marker time="8659834" label="" />
+      <marker time="9850323" label="" />
+      <marker time="10964323" label="" />
+      <marker time="12557323" label="" />
+      <marker time="13766323" label="" />
+      <marker time="14857323" label="" />
+      <marker time="16364323" label="" />
    </wave_markers>
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -97,11 +98,23 @@
          <obj_property name="ElementShortName">t2[31:0]</obj_property>
          <obj_property name="ObjectShortName">t2[31:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ID/register0/Regsiter[10]" type="array">
+         <obj_property name="ElementShortName">[10][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/Pipeline0/ID/register0/Regsiter[11]" type="array">
+         <obj_property name="ElementShortName">[11][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group5" type="group">
       <obj_property name="label">ID</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group89" type="group">
+         <obj_property name="label">csr_push</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
       <wvobject fp_name="/testbench/Pipeline0/ID/dec_reg_raddr1" type="array">
          <obj_property name="ElementShortName">dec_reg_raddr1[4:0]</obj_property>
          <obj_property name="ObjectShortName">dec_reg_raddr1[4:0]</obj_property>
@@ -150,53 +163,58 @@
          <obj_property name="ElementShortName">id_ex_in_mem_write_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">id_ex_in_mem_write_data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_ce" type="logic">
-         <obj_property name="ElementShortName">ex_dec_push_reg_ce</obj_property>
-         <obj_property name="ObjectShortName">ex_dec_push_reg_ce</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_data" type="array">
-         <obj_property name="ElementShortName">ex_dec_push_reg_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">ex_dec_push_reg_data[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_addr" type="array">
-         <obj_property name="ElementShortName">ex_dec_push_reg_addr[4:0]</obj_property>
-         <obj_property name="ObjectShortName">ex_dec_push_reg_addr[4:0]</obj_property>
-         <obj_property name="CustomSignalColor">#FFD700</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/mem_dec_push_reg_ce" type="logic">
-         <obj_property name="ElementShortName">mem_dec_push_reg_ce</obj_property>
-         <obj_property name="ObjectShortName">mem_dec_push_reg_ce</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/mem_dec_push_reg_data" type="array">
-         <obj_property name="ElementShortName">mem_dec_push_reg_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">mem_dec_push_reg_data[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/mem_dec_push_reg_addr" type="array">
-         <obj_property name="ElementShortName">mem_dec_push_reg_addr[4:0]</obj_property>
-         <obj_property name="ObjectShortName">mem_dec_push_reg_addr[4:0]</obj_property>
-         <obj_property name="CustomSignalColor">#FFD700</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/wb_dec_push_reg_ce" type="logic">
-         <obj_property name="ElementShortName">wb_dec_push_reg_ce</obj_property>
-         <obj_property name="ObjectShortName">wb_dec_push_reg_ce</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/wb_dec_push_reg_data" type="array">
-         <obj_property name="ElementShortName">wb_dec_push_reg_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">wb_dec_push_reg_data[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/Pipeline0/wb_dec_push_reg_addr" type="array">
-         <obj_property name="ElementShortName">wb_dec_push_reg_addr[4:0]</obj_property>
-         <obj_property name="ObjectShortName">wb_dec_push_reg_addr[4:0]</obj_property>
-         <obj_property name="CustomSignalColor">#FFD700</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="group88" type="group">
+         <obj_property name="label">reg_push</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_ce" type="logic">
+            <obj_property name="ElementShortName">ex_dec_push_reg_ce</obj_property>
+            <obj_property name="ObjectShortName">ex_dec_push_reg_ce</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_data" type="array">
+            <obj_property name="ElementShortName">ex_dec_push_reg_data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">ex_dec_push_reg_data[31:0]</obj_property>
+            <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/ex_dec_push_reg_addr" type="array">
+            <obj_property name="ElementShortName">ex_dec_push_reg_addr[4:0]</obj_property>
+            <obj_property name="ObjectShortName">ex_dec_push_reg_addr[4:0]</obj_property>
+            <obj_property name="CustomSignalColor">#FFD700</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/mem_dec_push_reg_ce" type="logic">
+            <obj_property name="ElementShortName">mem_dec_push_reg_ce</obj_property>
+            <obj_property name="ObjectShortName">mem_dec_push_reg_ce</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/mem_dec_push_reg_addr" type="array">
+            <obj_property name="ElementShortName">mem_dec_push_reg_addr[4:0]</obj_property>
+            <obj_property name="ObjectShortName">mem_dec_push_reg_addr[4:0]</obj_property>
+            <obj_property name="CustomSignalColor">#FFD700</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/mem_dec_push_reg_data" type="array">
+            <obj_property name="ElementShortName">mem_dec_push_reg_data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">mem_dec_push_reg_data[31:0]</obj_property>
+            <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/wb_dec_push_reg_ce" type="logic">
+            <obj_property name="ElementShortName">wb_dec_push_reg_ce</obj_property>
+            <obj_property name="ObjectShortName">wb_dec_push_reg_ce</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/wb_dec_push_reg_addr" type="array">
+            <obj_property name="ElementShortName">wb_dec_push_reg_addr[4:0]</obj_property>
+            <obj_property name="ObjectShortName">wb_dec_push_reg_addr[4:0]</obj_property>
+            <obj_property name="CustomSignalColor">#FFD700</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testbench/Pipeline0/wb_dec_push_reg_data" type="array">
+            <obj_property name="ElementShortName">wb_dec_push_reg_data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">wb_dec_push_reg_data[31:0]</obj_property>
+            <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group6" type="group">

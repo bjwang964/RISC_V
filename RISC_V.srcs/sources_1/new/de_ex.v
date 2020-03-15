@@ -40,6 +40,10 @@ module de_ex(
     input [5:0] i_mem_data_length,
     input i_mem_data_sign,
 
+    input i_csr_we,
+    input [11:0] i_csr_write_addr,
+    input `DataBus i_csr_rdata,
+
     output reg `UnitBus o_Unit,
     output reg `OpBus   o_Operate,
 
@@ -54,7 +58,11 @@ module de_ex(
     output reg o_mem_we,
     output reg `DataBus o_mem_write_data,
     output reg [5:0] o_mem_data_length,
-    output reg o_mem_data_sign
+    output reg o_mem_data_sign,
+
+    output reg o_csr_we,
+    output reg [11:0] o_csr_write_addr,
+    output reg `DataBus o_csr_rdata
 
     );
 
@@ -74,6 +82,11 @@ module de_ex(
             o_mem_write_data = i_mem_write_data;
             o_mem_data_length = i_mem_data_length;
             o_mem_data_sign = i_mem_data_sign;
+
+            o_csr_we = i_csr_we;
+            o_csr_write_addr = i_csr_write_addr;
+            o_csr_rdata = i_csr_rdata;
+
         end
 
     end

@@ -29,12 +29,20 @@ module mem_wb(
         input `RegBus i_reg_addr,
         input `DataBus i_ex_res,
         input `DataBus i_mem_data,
+        
+        input i_csr_we,
+        input [11:0] i_csr_write_addr,
+        input `DataBus i_csr_rdata,
 
         output reg o_reg_en,
         output reg o_mem_en,
         output reg `RegBus o_reg_addr,
         output reg `DataBus o_ex_res,
-        output reg `DataBus o_mem_data
+        output reg `DataBus o_mem_data,
+        
+        output reg o_csr_we,
+        output reg [11:0] o_csr_write_addr,
+        output reg `DataBus o_csr_rdata
     );
 
     always @ (posedge clk)
@@ -46,6 +54,10 @@ module mem_wb(
             o_reg_addr = i_reg_addr;
             o_ex_res = i_ex_res;
             o_mem_data = i_mem_data;
+            
+            o_csr_we = i_csr_we;
+            o_csr_write_addr = i_csr_write_addr;
+            o_csr_rdata = i_csr_rdata;
         end
     end
 endmodule

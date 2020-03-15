@@ -66,12 +66,33 @@ module register(
 
         input mem_we,
         input `RegBus mem_reg_addr,
-        output `DataBus mem_data
+        output `DataBus mem_data,
+        
+        input csr_en,
+        input [11:0] csr_read_addr,
+        output `DataBus csr_read_data,
+        
+        input csr_we,
+        input [11:0] csr_write_addr,
+        input `DataBus csr_write_data,
+
+        input i_ex_push_csr_ce,
+        input `RegBus i_ex_push_csr_addr,
+        input `DataBus i_ex_push_csr_data,
+
+        input i_mem_push_csr_ce,
+        input `RegBus i_mem_push_csr_addr,
+        input `DataBus i_mem_push_csr_data,
+
+        input i_wb_push_csr_ce,
+        input `RegBus i_wb_push_csr_addr,
+        input `DataBus i_wb_push_csr_data
     );
 
      reg `DataBus Regsiter [31:0];
-reg mark;
-(*keep = "true"*) wire `DataBus tt0 = Regsiter[10];
+     reg `DataBus CSR [7:0];
+     reg mark;
+    (*keep = "true"*) wire `DataBus tt0 = Regsiter[10];
     (*keep = "true"*) wire `DataBus tt1 = Regsiter[11];
     (*keep = "true"*) wire `DataBus tt2 = Regsiter[12];
     reg `DataBus t1;
@@ -123,10 +144,10 @@ reg mark;
               Regsiter[28] = 32'h0000001c;
               Regsiter[29] = 32'h0000001d;
               Regsiter[30] = 32'h0000001e;
-              Regsiter[31] = 32'h0000001f;
+              Regsiter[31] = 32'hffffffff;
               
               
-              
+              CSR[0] = 32'h00000000;
               
               
             end
@@ -137,6 +158,11 @@ reg mark;
                 begin
                     Regsiter[write_addr] = wdata;
                 end
+
+                if(csr_we == `WriteEnable)
+                begin
+                    CSR[csr_write_addr[2:0]] = csr_write_data;
+                end
             end
 
       end
@@ -145,13 +171,13 @@ reg mark;
       begin
           if(reset == `ResetEnable)
           begin
-              upstate = 1'b0;
-                  updes = 1'b0;
-                  act_jum_en = 0;
-                  act_des = 20'hzzzzz;
-                  uppc = 1'b0;
+                upstate = 1'b0;
+                updes = 1'b0;
+                act_jum_en = 0;
+                act_des = 20'hzzzzz;
+                uppc = 1'b0;
                   
-//                  rdata_1 = `Non32;
+//              rdata_1 = `Non32;
 //              rdata_2 = `Non32;
 //              mem_data = `Non32;
           end
@@ -314,5 +340,10 @@ reg mark;
                     Regsiter[mem_reg_addr]:
                     `Non32;
 
-
+    assign csr_read_data = (csr_en == `ReadEnable)?
+                    (csr_read_addr == i_ex_push_csr_addr && i_ex_push_csr_ce == `WriteEnable)?i_ex_push_csr_data:
+                    (csr_read_addr == i_mem_push_csr_addr && i_mem_push_csr_ce == `WriteEnable)?i_mem_push_csr_data:
+                    (csr_read_addr == i_wb_push_csr_addr && i_wb_push_csr_ce == `WriteEnable)?i_wb_push_csr_data:
+                    CSR[csr_read_addr]:
+                    `Non32;
 endmodule

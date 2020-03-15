@@ -46,6 +46,23 @@ module Instr_Decode(
         input `RegBus i_wb_push_reg_addr,
         input `DataBus i_wb_push_reg_data,
 
+
+        input i_csr_we,
+        input [11:0] i_csr_write_addr,
+        input `DataBus i_csr_write_data,
+
+        input i_ex_push_csr_ce,
+        input [11:0] i_ex_push_csr_addr,
+        input `DataBus i_ex_push_csr_data,
+
+        input i_mem_push_csr_ce,
+        input [11:0] i_mem_push_csr_addr,
+        input `DataBus i_mem_push_csr_data,
+
+        input i_wb_push_csr_ce,
+        input [11:0] i_wb_push_csr_addr,
+        input `DataBus i_wb_push_csr_data,
+
         output `UnitBus o_Unit,
         output `OpBus   o_Operate,
 
@@ -67,9 +84,18 @@ module Instr_Decode(
         output uppc,
         output [19:0] pre_pc,
         output [19:0] act_des,
-        output act_jum_en
-    );
+        output act_jum_en,
 
+        output o_csr_we,
+        output [11:0] o_csr_write_addr,
+        output `DataBus o_csr_rdata
+    );
+    //csr
+    wire dec_reg_csr_re;
+    wire [11:0] dec_reg_csr_addr;
+
+    wire `DataBus reg_opgre_csr_data;
+    assign o_csr_rdata = reg_opgre_csr_data;
     //¼Ä´æÆ÷Ê¹ÄÜ
     wire dec_reg_opger_regre1;
     wire dec_reg_opger_regre2;
@@ -96,7 +122,8 @@ module Instr_Decode(
         dec_reg_opger_regre1, dec_reg_opger_regre2, o_write_reg_ce,
         dec_reg_raddr1, dec_reg_raddr2, o_write_reg_addr,
         dec_opger_immre, dec_opger_imm,
-        o_mem_re, o_mem_we, dec_reg_mem_addr, o_mem_data_length, o_mem_data_sign
+        o_mem_re, o_mem_we, dec_reg_mem_addr, o_mem_data_length, o_mem_data_sign,
+        dec_reg_csr_re, o_csr_we, dec_reg_csr_addr, o_csr_write_addr
     );
 
     register register0(
@@ -109,13 +136,19 @@ module Instr_Decode(
         i_ex_push_reg_ce, i_ex_push_reg_addr, i_ex_push_reg_data,
         i_mem_push_reg_ce, i_mem_push_reg_addr, i_mem_push_reg_data,
         i_wb_push_reg_ce, i_wb_push_reg_addr, i_wb_push_reg_data,
-        o_mem_we, dec_reg_mem_addr, o_mem_write_data
+        o_mem_we, dec_reg_mem_addr, o_mem_write_data,
+
+        dec_reg_csr_re, dec_reg_csr_addr, reg_opgre_csr_data,
+        i_csr_we, i_csr_write_addr, i_csr_write_data, 
+        i_ex_push_csr_ce, i_ex_push_csr_addr, i_ex_push_csr_data,
+        i_mem_push_csr_ce, i_mem_push_csr_addr, i_mem_push_csr_data, 
+        i_wb_push_csr_ce, i_wb_push_csr_addr, i_wb_push_csr_data
     );
 
     operand_generator operand_generator0(
         reset,
-        dec_reg_opger_regre1, dec_reg_opger_regre2, dec_opger_immre,
-        reg_opger_data1, reg_opger_data2, dec_opger_imm,
+        dec_reg_opger_regre1, dec_reg_opger_regre2, dec_opger_immre, dec_reg_csr_re,
+        reg_opger_data1, reg_opger_data2, dec_opger_imm,reg_opgre_csr_data, 
         o_operand_1,o_operand_2,o_operand_3
     );
 

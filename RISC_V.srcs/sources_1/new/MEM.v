@@ -30,13 +30,23 @@ module MEM(
         input [15:0] addr,
         input [31:0] din,
         input [5:0] length,
+
+        input i_csr_we,
+        input [11:0] i_csr_write_addr,
+        input `DataBus i_csr_rdata,
  
-        output [31:0] dout
+        output [31:0] dout,
+
+        output o_csr_we,
+        output [11:0] o_csr_write_addr,
+        output `DataBus o_csr_rdata
     );
                         
     wire [13:0] addrin = addr[15:2];
 
-    
+    assign o_csr_we = i_csr_we;
+    assign o_csr_write_addr = i_csr_write_addr;
+    assign o_csr_rdata = i_csr_rdata;
 
     reg [1:0] states;
     reg wein;

@@ -27,10 +27,12 @@ module operand_generator(
         input i_ce1,
         input i_ce2,
         input i_ce3,
+        input i_csr_en,
 
         input `DataBus i_reg_data_1,
         input `DataBus i_reg_data_2,
         input `DataBus i_imm_data,
+        input `DataBus i_csr_data,
 
         output reg `DataBus o_operand_1,
         output reg `DataBus o_operand_2,
@@ -49,36 +51,55 @@ module operand_generator(
 
         else
         begin
-            if(i_ce1 == `ReadEnable)
+            if(i_csr_en == `ReadEnable)
             begin
-                o_operand_1 = i_reg_data_1;
+                if(i_ce1 == `ReadEnable)
+                begin
+                    o_operand_1 = i_reg_data_1;
+                end
+                else
+                begin
+                    o_operand_1 = i_imm_data;
+                end
+
+                o_operand_2 = i_csr_data;
             end
+
+
+
 
             else
             begin
-                o_operand_1 = `Non32;
-            end
+                if(i_ce1 == `ReadEnable)
+                begin
+                    o_operand_1 = i_reg_data_1;
+                end
 
-            if(i_ce2 == `ReadEnable)
-            begin
-                o_operand_2 = i_reg_data_2;
-            end
+                else
+                begin
+                    o_operand_1 = `Non32;
+                end
 
-            else
-            begin
-                o_operand_2 = i_imm_data;
-            end
+                if(i_ce2 == `ReadEnable)
+                begin
+                    o_operand_2 = i_reg_data_2;
+                end
 
-            if(i_ce3 == `ReadEnable)
-            begin
-                o_operand_3 = i_imm_data;
-            end
+                else
+                begin
+                    o_operand_2 = i_imm_data;
+                end
 
-            else
-            begin
-                o_operand_3 = `Non32;
-            end
+                if(i_ce3 == `ReadEnable)
+                begin
+                    o_operand_3 = i_imm_data;
+                end
 
+                else
+                begin
+                    o_operand_3 = `Non32;
+                end
+            end
 
         end
     end

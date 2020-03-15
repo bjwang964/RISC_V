@@ -22,13 +22,14 @@ Compiling module simprims_ver.LUT3
 Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.shifter
 Compiling module xil_defaultlib.EX
-Compiling module simprims_ver.FDCE_default
-Compiling module simprims_ver.FDPE_default
-Compiling module simprims_ver.MUXF8
-Compiling module simprims_ver.CARRY4
-Compiling module simprims_ver.MUXF7
 Compiling module simprims_ver.x_lut1_mux2
 Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
 Compiling module xil_defaultlib.register
 Compiling module xil_defaultlib.Instr_Decode
 Compiling module xil_defaultlib.BTB
@@ -43,7 +44,6 @@ Compiling module xil_defaultlib.ROM
 Compiling module xil_defaultlib.adder4
 Compiling module xil_defaultlib.Instr_Fetch
 Compiling module xil_defaultlib.RAM32_bindec
-Compiling module simprims_ver.FDRE_default
 Compiling module xil_defaultlib.RAM32_blk_mem_gen_mux
 Compiling module simprims_ver.RB18_INTERNAL_VLOG(RDADDR_COLLIS...
 Compiling module simprims_ver.RAMB18E1(INIT_00=256'b0101010101...
@@ -96,6 +96,7 @@ Compiling module simprims_ver.BUFG
 Compiling module simprims_ver.IBUF
 Compiling module xil_defaultlib.ctrl
 Compiling module xil_defaultlib.de_ex
+Compiling module simprims_ver.SRL16E_default
 Compiling module xil_defaultlib.ex_mem
 Compiling module xil_defaultlib.fet_dec
 Compiling module xil_defaultlib.ins_val

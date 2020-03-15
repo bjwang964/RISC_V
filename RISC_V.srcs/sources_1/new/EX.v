@@ -39,6 +39,10 @@ module EX(
         input [5:0] i_mem_data_length,
         input i_mem_data_sign,
 
+        input i_csr_we,
+        input [11:0] i_csr_write_addr,
+        input `DataBus i_csr_rdata,
+
 
         output reg `DataBus o_res,
         output o_write_reg_ce,
@@ -48,7 +52,11 @@ module EX(
         output o_mem_we,
         output `DataBus o_mem_write_data,
         output [5:0] o_mem_data_length,
-        output o_mem_data_sign
+        output o_mem_data_sign,
+
+        output o_csr_we,
+        output [11:0] o_csr_write_addr,
+        output `DataBus o_csr_rdata
     );
 
     assign o_mem_en = i_mem_re | i_mem_we;
@@ -59,6 +67,10 @@ module EX(
 
     assign o_write_reg_ce = i_write_reg_ce;
     assign o_write_reg_addr = i_write_reg_addr;
+
+    assign o_csr_we = i_csr_we;
+    assign o_csr_write_addr = i_csr_write_addr;
+    assign o_csr_rdata = i_csr_rdata;
 
     wire `DataBus ALU_res;
     wire `DataBus SHIF_res;
@@ -84,7 +96,7 @@ module EX(
             `ExeInt:
             begin
                 case (i_Operate)
-                    `Add,`Sub,`And,`Or,`Xor:
+                    `Add,`Sub,`And,`Or,`Xor, `Empty:
                     begin
                         o_res = ALU_res;
                     end 

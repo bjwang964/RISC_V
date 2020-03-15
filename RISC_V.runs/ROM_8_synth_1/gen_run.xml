@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="ROM_8_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1583412290">
+<GenRun Id="ROM_8_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1584269868">
   <File Type="PA-TCL" Name="ROM_8.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ROM_8_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ROM_8_reports.tcl"/>
   <File Type="RDS-RDS" Name="ROM_8.vds"/>
   <File Type="RDS-UTIL" Name="ROM_8_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ROM_8_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="ROM_8.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ROM_8_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ROM_8_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ROM_8">
     <File Path="$PSRCDIR/sources_1/ip/ROM_8/ROM_8.xci">
       <FileInfo>
