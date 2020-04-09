@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tfgg484-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -26,7 +25,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/wt [current_project]
 set_property parent.project_path C:/Users/q1109/OneDrive/RISC_V/RISC_V.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/ip [current_project]
@@ -70,6 +69,12 @@ set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDriv
 read_ip -quiet C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci
 set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8_ooc.xdc]
 
+read_ip -quiet C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_0.xci
+set_property used_in_synthesis false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -78,6 +83,9 @@ set_property used_in_implementation false [get_files -all c:/Users/q1109/OneDriv
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/constrs_2/new/ys.xdc
+set_property used_in_implementation false [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/constrs_2/new/ys.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

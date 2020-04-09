@@ -15,71 +15,73 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8688 
-WARNING: [Synth 8-6901] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:125]
-WARNING: [Synth 8-6901] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:127]
-WARNING: [Synth 8-6901] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:129]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:132]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:134]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:136]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_mem_data' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:136]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
-WARNING: [Synth 8-6901] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:152]
-WARNING: [Synth 8-6901] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:154]
-WARNING: [Synth 8-6901] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:156]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:159]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:161]
-WARNING: [Synth 8-6901] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:163]
+INFO: Helper process launched with PID 588 
+WARNING: [Synth 8-6901] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:128]
+WARNING: [Synth 8-6901] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:130]
+WARNING: [Synth 8-6901] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:132]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:135]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_mem_data' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:140]
+WARNING: [Synth 8-6901] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:155]
+WARNING: [Synth 8-6901] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:157]
+WARNING: [Synth 8-6901] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:159]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:162]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [Synth 8-6901] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 994.340 ; gain = 242.148
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1012.055 ; gain = 242.297
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Pipeline' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:24]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:42]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:43]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:44]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:45]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:46]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:47]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:49]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:48]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:50]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:51]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:51]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:52]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:54]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:53]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:55]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:55]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:56]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:57]
 INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:58]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:60]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:79]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:80]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:81]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:96]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:125]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:127]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:129]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:59]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:61]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:82]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:83]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:84]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:99]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:128]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:130]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:132]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:134]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:136]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:141]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:143]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:145]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:152]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:154]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:156]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:135]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:144]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:146]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:148]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:155]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:157]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:159]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:161]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:163]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:162]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:168]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:170]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:223]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:307]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:169]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:171]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:173]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:239]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:323]
 INFO: [Synth 8-6157] synthesizing module 'Instr_Fetch' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v:24]
 INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ROM_8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-8644-LAPTOP-AEDG5TQK/realtime/ROM_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ROM_8' (2#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-8644-LAPTOP-AEDG5TQK/realtime/ROM_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ROM_8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-9632-LAPTOP-AEDG5TQK/realtime/ROM_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_8' (2#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-9632-LAPTOP-AEDG5TQK/realtime/ROM_8_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'ROM' (3#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v:23]
 INFO: [Synth 8-6157] synthesizing module 'dec' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'dec' (4#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v:23]
@@ -97,6 +99,7 @@ INFO: [Synth 8-6157] synthesizing module 'adder4' [C:/Users/q1109/OneDrive/RISC_
 INFO: [Synth 8-6155] done synthesizing module 'adder4' (8#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Instr_Fetch' (9#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v:24]
 INFO: [Synth 8-6157] synthesizing module 'fet_dec' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v:24]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'fet_dec' (10#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v:24]
 INFO: [Synth 8-6157] synthesizing module 'Instr_Decode' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:24]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:104]
@@ -131,39 +134,53 @@ INFO: [Synth 8-6157] synthesizing module 'ins_val' [C:/Users/q1109/OneDrive/RISC
 INFO: [Synth 8-6155] done synthesizing module 'ins_val' (15#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v:23]
 INFO: [Synth 8-6157] synthesizing module 'de_ex' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'de_ex' (16#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v:24]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:225]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-9632-LAPTOP-AEDG5TQK/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (17#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-9632-LAPTOP-AEDG5TQK/realtime/ila_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'EX' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
 INFO: [Synth 8-6157] synthesizing module 'ADD32' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
 INFO: [Synth 8-6157] synthesizing module 'ADD1' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD1' (17#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD8' (18#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ADD1' (18#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ADD8' (19#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
 WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
 WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
 WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
 WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'ADD32' (19#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (20#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'ADD32' (20#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (21#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
 INFO: [Synth 8-6157] synthesizing module 'shifter' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'shifter' (21#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'EX' (22#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'shifter' (22#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (23#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
 INFO: [Synth 8-6157] synthesizing module 'ctrl' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ctrl' (23#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (24#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ex_mem' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (24#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (25#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v:24]
 INFO: [Synth 8-6157] synthesizing module 'MEM' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v:24]
-INFO: [Synth 8-6157] synthesizing module 'RAM32' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-8644-LAPTOP-AEDG5TQK/realtime/RAM32_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'RAM32' (25#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-8644-LAPTOP-AEDG5TQK/realtime/RAM32_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'RAM32' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-9632-LAPTOP-AEDG5TQK/realtime/RAM32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RAM32' (26#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/.Xil/Vivado-9632-LAPTOP-AEDG5TQK/realtime/RAM32_stub.v:6]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v:126]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v:145]
-INFO: [Synth 8-6155] done synthesizing module 'MEM' (26#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v:24]
-WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (16) of module 'MEM' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:319]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (27#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v:24]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (16) of module 'MEM' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:335]
 INFO: [Synth 8-6157] synthesizing module 'mem_wb' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (27#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (28#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v:23]
 INFO: [Synth 8-6157] synthesizing module 'WB' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'WB' (28#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'Pipeline' (29#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (29#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v:24]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'IF'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:64]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:225]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fd'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:71]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mw'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:342]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'MEM0'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:332]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'em'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:290]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl0'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:284]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'de'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:206]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'iv'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:201]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ID'. This will prevent further optimization [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline' (30#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:24]
 WARNING: [Synth 8-3331] design EX has unconnected port reset
 WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[31]
 WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[30]
@@ -266,7 +283,7 @@ WARNING: [Synth 8-3331] design PHT has unconnected port pc[19]
 WARNING: [Synth 8-3331] design PHT has unconnected port pc[18]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1056.672 ; gain = 304.480
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1075.379 ; gain = 305.621
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -279,12 +296,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1056.672 ; gain = 304.480
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1080.453 ; gain = 310.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1056.672 ; gain = 304.480
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1080.453 ; gain = 310.695
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1056.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1083.734 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -293,30 +310,37 @@ Parsing XDC File [c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/
 Finished Parsing XDC File [c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/RAM32/RAM32_in_context.xdc] for cell 'MEM0/RAM320'
 Parsing XDC File [c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8/ROM_8_in_context.xdc] for cell 'IF/ROM0/rom'
 Finished Parsing XDC File [c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8/ROM_8_in_context.xdc] for cell 'IF/ROM0/rom'
+Parsing XDC File [c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Finished Parsing XDC File [c:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Parsing XDC File [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/constrs_2/new/ys.xdc]
+Finished Parsing XDC File [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/constrs_2/new/ys.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/constrs_2/new/ys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Pipeline_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Pipeline_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1174.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1210.883 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1174.305 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1210.883 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for MEM0/RAM320. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for IF/ROM0/rom. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for your_instance_name. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "o_Unit2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "o_Operate2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -334,7 +358,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'add_op1_reg' [C:/Users/q110
 WARNING: [Synth 8-327] inferring latch for variable 'add_op2_reg' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:41]
 WARNING: [Synth 8-327] inferring latch for variable 'temp_reg' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:35]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -584,73 +608,73 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5544] ROM "act_des2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ALU0/o_result0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[31]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[30]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[29]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[28]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[27]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[26]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[25]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[24]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[23]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[22]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[21]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[20]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[19]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[18]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[17]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[16]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[15]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[14]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[13]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[12]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[11]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[10]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[9]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[8]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[7]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[6]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[5]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[4]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[3]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[2]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[1]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (ID/operand_generator0/o_operand_3_reg[0]) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_141) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_142) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_143) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_144) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_145) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_146) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_147) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_148) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_149) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_150) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_151) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_152) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_153) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_154) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_155) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_156) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_157) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_158) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_159) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_160) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_161) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_162) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_163) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_164) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_165) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_166) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_167) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_168) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_169) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_170) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_171) is unused and will be removed from module Pipeline.
-WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_172) is unused and will be removed from module Pipeline.
+INFO: [Synth 8-5544] ROM "EX0/ALU0/o_result0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[31]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[30]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[29]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[28]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[27]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[26]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[25]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[24]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[23]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[22]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[21]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[20]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[19]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[18]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[17]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[16]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[15]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[14]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[13]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[12]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[11]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[10]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[9]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[8]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[7]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[6]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[5]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[4]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[3]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[2]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[1]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (operand_generator0/o_operand_3_reg[0]) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_141) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_142) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_143) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_144) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_145) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_146) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_147) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_148) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_149) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_150) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_151) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_152) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_153) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_154) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_155) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_156) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_157) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_158) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_159) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_160) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_161) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_162) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_163) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_164) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_165) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_166) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_167) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_168) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_169) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_170) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_171) is unused and will be removed from module Instr_Decode.
+WARNING: [Synth 8-3332] Sequential element (o_operand_3_regi_172) is unused and will be removed from module Instr_Decode.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -662,13 +686,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1174.305 ; gain = 422.113
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1210.883 ; gain = 441.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -680,7 +704,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1219.488 ; gain = 467.297
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1226.387 ; gain = 456.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -703,14 +727,15 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v:39]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -729,39 +754,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Pipeline    | mw/o_csr_rdata_reg[31] | 3      | 32    | NO           | NO                 | YES               | 32     | 0       | 
-+------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -773,6 +784,7 @@ Report BlackBoxes:
 +------+--------------+----------+
 |1     |ROM_8         |         1|
 |2     |RAM32         |         1|
+|3     |ila_0         |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -781,75 +793,74 @@ Report Cell Usage:
 +------+-------+------+
 |1     |RAM32  |     1|
 |2     |ROM_8  |     1|
-|3     |BUFG   |     4|
-|4     |CARRY4 |    37|
-|5     |LUT1   |   247|
-|6     |LUT2   |   455|
-|7     |LUT3   |   204|
-|8     |LUT4   |    94|
-|9     |LUT5   |   530|
-|10    |LUT6   |  2087|
-|11    |MUXF7  |   674|
-|12    |MUXF8  |   256|
-|13    |SRL16E |    32|
+|3     |ila_0  |     1|
+|4     |BUFG   |     4|
+|5     |CARRY4 |    37|
+|6     |LUT1   |   375|
+|7     |LUT2   |   452|
+|8     |LUT3   |   198|
+|9     |LUT4   |    72|
+|10    |LUT5   |   572|
+|11    |LUT6   |  2137|
+|12    |MUXF7  |   674|
+|13    |MUXF8  |   320|
 |14    |FDCE   |  1147|
 |15    |FDPE   |   110|
-|16    |FDRE   |   620|
-|17    |FDSE   |    14|
-|18    |LD     |   129|
-|19    |IBUF   |     2|
-|20    |OBUF   |    38|
+|16    |FDRE   |   698|
+|17    |LD     |   129|
+|18    |IBUF   |     3|
+|19    |OBUF   |    38|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------+-------------+------+
 |      |Instance      |Module       |Cells |
 +------+--------------+-------------+------+
-|1     |top           |             |  6744|
-|2     |  iv          |ins_val      |     2|
-|3     |  EX0         |EX           |   212|
-|4     |    ALU0      |ALU          |   180|
-|5     |    shifter0  |shifter      |    32|
-|6     |  ID          |Instr_Decode |  4556|
-|7     |    register0 |register     |  4468|
-|8     |  IF          |Instr_Fetch  |   350|
-|9     |    BTB0      |BTB          |   228|
-|10    |    PC0       |PC           |    21|
-|11    |    PHT0      |PHT          |    63|
-|12    |    ROM0      |ROM          |    33|
-|13    |    adder40   |adder4       |     5|
-|14    |  MEM0        |MEM          |    39|
-|15    |  WB0         |WB           |    32|
-|16    |  ctrl0       |ctrl         |     3|
-|17    |  de          |de_ex        |   736|
-|18    |  em          |ex_mem       |   311|
-|19    |  fd          |fet_dec      |    73|
-|20    |  mw          |mem_wb       |   125|
+|1     |top           |             |  7030|
+|2     |  IF          |Instr_Fetch  |   358|
+|3     |    BTB0      |BTB          |   228|
+|4     |    PC0       |PC           |    21|
+|5     |    PHT0      |PHT          |    71|
+|6     |    ROM0      |ROM          |    33|
+|7     |    adder40   |adder4       |     5|
+|8     |  fd          |fet_dec      |    73|
+|9     |  ID          |Instr_Decode |  4891|
+|10    |    register0 |register     |  4604|
+|11    |  iv          |ins_val      |     2|
+|12    |  de          |de_ex        |   162|
+|13    |  ctrl0       |ctrl         |     4|
+|14    |  em          |ex_mem       |   123|
+|15    |  MEM0        |MEM          |   151|
+|16    |  mw          |mem_wb       |   116|
+|17    |  EX0         |EX           |   633|
+|18    |    ALU0      |ALU          |   297|
+|19    |    shifter0  |shifter      |   336|
+|20    |  WB0         |WB           |    32|
 +------+--------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1241.211 ; gain = 471.453
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 150 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1230.078 ; gain = 360.254
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1230.078 ; gain = 477.887
+Synthesis finished with 0 errors, 0 critical warnings and 118 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:49 . Memory (MB): peak = 1241.211 ; gain = 341.023
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1241.211 ; gain = 471.453
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.120 . Memory (MB): peak = 1238.145 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1096 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1246.563 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1160 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1238.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1248.734 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 129 instances were transformed.
   LD => LDCE: 129 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-135 Infos, 199 Warnings, 0 Critical Warnings and 0 Errors encountered.
+152 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1238.180 ; gain = 755.891
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1238.180 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1248.734 ; gain = 751.535
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1248.734 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/Pipeline.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Pipeline_utilization_synth.rpt -pb Pipeline_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 15 19:02:08 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 16:27:21 2020...

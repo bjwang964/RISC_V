@@ -10,6 +10,7 @@ vmap dist_mem_gen_v8_0_13 modelsim_lib/msim/dist_mem_gen_v8_0_13
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 
 vlog -work xpm -64 -incr -sv \
+"C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
@@ -20,7 +21,6 @@ vlog -work dist_mem_gen_v8_0_13 -64 -incr \
 
 vlog -work xil_defaultlib -64 -incr \
 "../../../../RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" \
-
 
 vlog -work xil_defaultlib \
 "glbl.v"

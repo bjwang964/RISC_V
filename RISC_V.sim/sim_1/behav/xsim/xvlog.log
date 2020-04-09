@@ -1,5 +1,7 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ROM_8
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v" into library xil_defaultlib
@@ -28,19 +30,19 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC
 INFO: [VRFC 10-311] analyzing module PHT
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Pipeline
-WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:125]
-WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:127]
-WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:129]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:132]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:134]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:136]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
-WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:152]
-WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:154]
-WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:156]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:159]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:161]
-WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:163]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:128]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:130]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:132]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:135]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:140]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:155]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:157]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:159]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:162]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ROM
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v" into library xil_defaultlib

@@ -44,7 +44,7 @@ module mem_wb(
         output reg [11:0] o_csr_write_addr,
         output reg `DataBus o_csr_rdata
     );
-
+   (* DONT_TOUCH= "true" *) wire [31:0] test_mem_data = i_mem_data;
     always @ (posedge clk)
     begin
         if(clken == 1'b1)

@@ -35,7 +35,7 @@ module fet_dec(
     output reg [19:0] o_pre_des,
     output reg o_pre_jum_en
     );
-
+    (* DONT_TOUCH= "true" *)wire [31:0] test_i_ins = i_instr;
     always @ (posedge clk)
     begin
         if(clken == 1'b1)

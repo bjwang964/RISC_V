@@ -23,7 +23,8 @@
 
 module Pipeline(
         input clk,
-        input reset,
+        input sys_clk,
+        input sys_reset,
 
         output o_reg_ce,
         output `RegBus o_reg_addr,
@@ -31,7 +32,7 @@ module Pipeline(
     );
 
     wire finish;
-
+    wire reset = ~sys_reset;
 
 
 /***************fetch***************/
@@ -47,11 +48,11 @@ module Pipeline(
    (* DONT_TOUCH= "true" *) wire act_jum_en;
     
    (* DONT_TOUCH= "true" *) wire [31:0] i_instr;
-   (* DONT_TOUCH= "true" *) wire [19:0] i_pc;
+   (*mark_debug = "true"*)(* DONT_TOUCH= "true" *) wire [19:0] i_pc;
    (* DONT_TOUCH= "true" *) wire [19:0] i_pre_des;
    (* DONT_TOUCH= "true" *) wire i_pre_jum_en;
     
-   (* DONT_TOUCH= "true" *) wire [31:0] o_instr;
+   (*mark_debug = "true"*)(* DONT_TOUCH= "true" *) wire [31:0] o_instr;
    (* DONT_TOUCH= "true" *) wire [31:0] d_instr;
    (* DONT_TOUCH= "true" *) wire [19:0] o_pc;
    (* DONT_TOUCH= "true" *) wire [19:0] o_pre_des;
@@ -73,6 +74,8 @@ module Pipeline(
          i_instr, i_pc,i_pre_des, i_pre_jum_en,
         o_instr, o_pc,o_pre_des, o_pre_jum_en
     );
+    
+
 
 /***************decode***************/
 
@@ -216,6 +219,19 @@ module Pipeline(
         id_ex_out_mem_re, id_ex_out_mem_we, id_ex_out_mem_write_data, id_ex_out_mem_data_length, id_ex_out_mem_data_sign,
         id_ex_out_csr_we, id_ex_out_csr_write_addr,id_ex_out_csr_rdata
     );
+    
+    
+    
+    ila_0 your_instance_name (
+	.clk(sys_clk), // input wire clk
+
+
+	.probe0(o_instr), // input wire [31:0]  probe0  
+	.probe1(i_pc), // input wire [19:0]  probe1 
+	.probe2(clk), // input wire [0:0]  probe2 
+	.probe3(o_reg_addr), // input wire [31:0]  probe3 
+	.probe4(o_reg_data) // input wire [31:0]  probe4
+);
 
 /***************execute***************/
 

@@ -33,15 +33,19 @@ module testbench(
     
     Pipeline Pipeline0
     (
-        clk, reset,
+        clk, , reset,
         o_reg_ce, o_reg_addr, o_reg_data
     );
     
     initial 
     begin
-        reset = 0; #50 reset = ~reset;#50 reset = ~reset;
-        #50 clk = 0;
-        forever #50 clk = ~clk;
+        clk = 0;
+        reset = 1; 
+        #200 reset = ~reset;
+        #200 clk = ~clk;#200 clk = ~clk;
+        #200 reset = ~reset;
+        #200 clk = 0;
+        forever #200 clk = ~clk;
     end
     
 

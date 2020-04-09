@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1584270051">
+<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1586420758">
   <File Type="PA-TCL" Name="Pipeline.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Pipeline_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Pipeline_reports.tcl"/>
@@ -246,9 +246,15 @@
       <Option Name="TopModule" Val="Pipeline"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
-    <Filter Type="Constrs"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
+    <File Path="$PSRCDIR/constrs_2/new/ys.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/new/ys.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -264,4 +270,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="RAM32"/>
   <BlockFileSet Type="BlockSrcs" Name="ROM_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>

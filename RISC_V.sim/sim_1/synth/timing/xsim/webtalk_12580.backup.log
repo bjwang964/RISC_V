@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Mar 15 18:46:57 2020
+# Process ID: 12580
+# Current directory: C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/synth/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/synth/timing/xsim/xsim.dir/testbench_time_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/synth/timing/xsim/webtalk.log
+# Journal file: C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/synth/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/synth/timing/xsim/xsim.dir/testbench_time_synth/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 110.352 ; gain = 17.836
+INFO: [Common 17-206] Exiting Webtalk at Sun Mar 15 18:47:05 2020...

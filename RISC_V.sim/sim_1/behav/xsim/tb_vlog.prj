@@ -1,0 +1,39 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" \
+"../../../../RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" \
+"../../../../RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" \
+"../../../../RISC_V.srcs/sources_1/new/ADD1.v" \
+"../../../../RISC_V.srcs/sources_1/new/ADD32.v" \
+"../../../../RISC_V.srcs/sources_1/new/ADD8.v" \
+"../../../../RISC_V.srcs/sources_1/new/ALU.v" \
+"../../../../RISC_V.srcs/sources_1/new/BTB.v" \
+"../../../../RISC_V.srcs/sources_1/new/Decoder.v" \
+"../../../../RISC_V.srcs/sources_1/new/EX.v" \
+"../../../../RISC_V.srcs/sources_1/new/Instr_Decode.v" \
+"../../../../RISC_V.srcs/sources_1/new/Instr_Fetch.v" \
+"../../../../RISC_V.srcs/sources_1/new/MEM.v" \
+"../../../../RISC_V.srcs/sources_1/new/PC.v" \
+"../../../../RISC_V.srcs/sources_1/new/PHT.v" \
+"../../../../RISC_V.srcs/sources_1/new/Pipeline.v" \
+"../../../../RISC_V.srcs/sources_1/new/ROM.v" \
+"../../../../RISC_V.srcs/sources_1/new/WB.v" \
+"../../../../RISC_V.srcs/sources_1/new/adder4.v" \
+"../../../../RISC_V.srcs/sources_1/new/ctrl.v" \
+"../../../../RISC_V.srcs/sources_1/new/de_ex.v" \
+"../../../../RISC_V.srcs/sources_1/new/dec.v" \
+"../../../../RISC_V.srcs/sources_1/new/ex_mem.v" \
+"../../../../RISC_V.srcs/sources_1/new/fet_dec.v" \
+"../../../../RISC_V.srcs/sources_1/new/ins_val.v" \
+"../../../../RISC_V.srcs/sources_1/new/mem_wb.v" \
+"../../../../RISC_V.srcs/sources_1/new/operand_generator.v" \
+"../../../../RISC_V.srcs/sources_1/new/pc_sel.v" \
+"../../../../RISC_V.srcs/sources_1/new/register.v" \
+"../../../../RISC_V.srcs/sources_1/new/shifter.v" \
+"../../../../RISC_V.srcs/sim_1/new/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

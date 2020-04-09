@@ -25,8 +25,16 @@ module ROM(
     input [19:0] pc,
     output [31:0] ins
     );
+    /*wire [19:0] npc = pc & 20'h00000;
+    
+    ROM_8 rom(
+       npc[10:2],
+        ins
+    );*/
+    
     ROM_8 rom(
         pc[10:2],
         ins
     );
+   
 endmodule
