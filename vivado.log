@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Feb  4 16:58:28 2020
-# Process ID: 13048
+# Start of session at: Sun May  3 16:34:44 2020
+# Process ID: 8704
 # Current directory: C:/Users/q1109/OneDrive/RISC_V
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12952 C:\Users\q1109\OneDrive\RISC_V\RISC_V.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5432 C:\Users\q1109\OneDrive\RISC_V\RISC_V.xpr
 # Log file: C:/Users/q1109/OneDrive/RISC_V/vivado.log
 # Journal file: C:/Users/q1109/OneDrive/RISC_V\vivado.jou
 #-----------------------------------------------------------
@@ -14,320 +14,109 @@ open_project C:/Users/q1109/OneDrive/RISC_V/RISC_V.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/q1109/OneDrive/ip_repo/myip_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 930.793 ; gain = 265.961
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:55 . Memory (MB): peak = 954.340 ; gain = 321.840
 update_compile_order -fileset sources_1
-close [ open C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v w ]
-add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v
-update_compile_order -fileset sources_1
-close [ open C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v w ]
-add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v
-update_compile_order -fileset sources_1
-close [ open C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v w ]
-add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v
-update_compile_order -fileset sources_1
-close [ open C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v w ]
-add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v
-update_compile_order -fileset sources_1
-close [ open C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v w ]
-add_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v
-update_compile_order -fileset sources_1
-set_property top EX [current_fileset]
-update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun May  3 16:40:23 2020] Launched impl_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+[Sun May  3 16:42:04 2020] Launched impl_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/runme.log
 reset_run synth_1
 launch_runs synth_1 -jobs 8
-[Tue Feb  4 18:49:38 2020] Launched synth_1...
+[Sun May  3 16:45:38 2020] Launched synth_1...
 Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-[Tue Feb  4 18:50:30 2020] Launched synth_1...
-Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/runme.log
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7a35tfgg484-2
-Top: EX
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun May  3 16:47:52 2020] Launched impl_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/runme.log
+open_run impl_1
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1471.918 ; gain = 230.297
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'EX' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
-INFO: [Synth 8-6157] synthesizing module 'ADD32' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
-INFO: [Synth 8-6157] synthesizing module 'ADD1' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD1' (1#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD8' (2#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'ADD32' (3#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
-WARNING: [Synth 8-3848] Net add_cin in module/entity ALU does not have driver. [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (4#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
-INFO: [Synth 8-6157] synthesizing module 'shifter' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'shifter' (5#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'EX' (6#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
-WARNING: [Synth 8-3331] design EX has unconnected port reset
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[31]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[30]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[29]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[28]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[27]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[26]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[25]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[24]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[23]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[22]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[21]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[20]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[19]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[18]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[17]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[16]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[15]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[14]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[13]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[12]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[11]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[10]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[9]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[8]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[7]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[6]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[5]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[4]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[3]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[2]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[1]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[0]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1522.094 ; gain = 280.473
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1522.094 ; gain = 280.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1522.094 ; gain = 280.473
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1522.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.209 . Memory (MB): peak = 1301.637 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1190 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 6 IBUFs to IO ports without IO buffers.
-INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers.
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1638.730 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2015.141 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2015.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2015.141 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 86 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 80 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1721.359 ; gain = 479.738
-19 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1721.359 ; gain = 720.305
-refresh_design
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Common 17-344] 'source' was cancelled
-INFO: [Common 17-344] 'refresh_design' was cancelled
-refresh_design
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_NOC_M_AXI [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:14]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_NOC_M_AXIS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:130]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_NOC_S_AXI [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:160]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_NOC_S_AXIS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:268]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_M_AXIS128 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:298]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_M_AXIS32 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:318]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_M_AXIS64 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:338]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_M_EVENTS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:358]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_S_AXIS128 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:368]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_S_AXIS32 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:388]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_S_AXIS64 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:408]
-WARNING: [Synth 8-2490] overwriting previous definition of module AIE_PL_S_EVENTS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:428]
-WARNING: [Synth 8-2490] overwriting previous definition of module AMS_ADC [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:438]
-WARNING: [Synth 8-2490] overwriting previous definition of module AMS_DAC [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:452]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:466]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND2B1 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:478]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND2B1L [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:490]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND2B2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:503]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND3 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:514]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND3B1 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:526]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND3B2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:538]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND3B3 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:550]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:562]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND4B1 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:575]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND4B2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:588]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND4B3 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:601]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND4B4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:614]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND5 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:627]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND5B1 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:641]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND5B2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:655]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND5B3 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:669]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND5B4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:683]
-WARNING: [Synth 8-2490] overwriting previous definition of module AND5B5 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:697]
-WARNING: [Synth 8-2490] overwriting previous definition of module AUTOBUF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:711]
-WARNING: [Synth 8-2490] overwriting previous definition of module BIBUF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:722]
-WARNING: [Synth 8-2490] overwriting previous definition of module BITSLICE_CONTROL [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:732]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCANE2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:876]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCAN_SPARTAN3 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:906]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCAN_SPARTAN3A [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:925]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCAN_SPARTAN6 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:946]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCAN_VIRTEX4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:966]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCAN_VIRTEX5 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:983]
-WARNING: [Synth 8-2490] overwriting previous definition of module BSCAN_VIRTEX6 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1000]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1021]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFCE_LEAF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1031]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFCE_ROW [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1046]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFDIV_LEAF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1061]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFG [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGCE [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1085]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGCE_1 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1102]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGCE_DIV [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1114]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGCTRL [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1136]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGMUX [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1175]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGMUX_1 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1190]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGMUX_CTRL [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1203]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGMUX_VIRTEX4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1217]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFGP [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1231]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFG_FABRIC [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1241]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFG_GT [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1251]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFG_GT_SYNC [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1273]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFG_LB [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1289]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFG_PS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1299]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFH [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1311]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFHCE [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1321]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFIO [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1336]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFIO2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1346]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFIODQS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1364]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFMR [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1377]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFMRCE [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1387]
-WARNING: [Synth 8-2490] overwriting previous definition of module BUFR [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1402]
-WARNING: [Synth 8-2490] overwriting previous definition of module CAPTUREE2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1418]
-WARNING: [Synth 8-2490] overwriting previous definition of module CAPTURE_SPARTAN3 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1429]
-WARNING: [Synth 8-2490] overwriting previous definition of module CAPTURE_SPARTAN3A [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1439]
-WARNING: [Synth 8-2490] overwriting previous definition of module CAPTURE_VIRTEX4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1449]
-WARNING: [Synth 8-2490] overwriting previous definition of module CAPTURE_VIRTEX5 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1459]
-WARNING: [Synth 8-2490] overwriting previous definition of module CAPTURE_VIRTEX6 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1469]
-WARNING: [Synth 8-2490] overwriting previous definition of module CARRY4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
-WARNING: [Synth 8-2490] overwriting previous definition of module CARRY8 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1497]
-WARNING: [Synth 8-2490] overwriting previous definition of module CFGLUT5 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1516]
-WARNING: [Synth 8-2490] overwriting previous definition of module CLKDLL [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1546]
-WARNING: [Synth 8-2490] overwriting previous definition of module CLKDLLE [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1576]
-WARNING: [Synth 8-2490] overwriting previous definition of module CLKDLLHF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1608]
-WARNING: [Synth 8-2490] overwriting previous definition of module CMAC [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1632]
-WARNING: [Synth 8-2490] overwriting previous definition of module CMACE4 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:2442]
-WARNING: [Synth 8-2490] overwriting previous definition of module CPM [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:3358]
-WARNING: [Synth 8-2490] overwriting previous definition of module CPM_EXT [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:6584]
-WARNING: [Synth 8-2490] overwriting previous definition of module CPM_MAIN [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:7356]
-WARNING: [Synth 8-2490] overwriting previous definition of module DCIRESET [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10596]
-WARNING: [Synth 8-2490] overwriting previous definition of module DCM [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10606]
-WARNING: [Synth 8-2490] overwriting previous definition of module DCM_ADV [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10652]
-WARNING: [Synth 8-2490] overwriting previous definition of module DCM_BASE [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10723]
-WARNING: [Synth 8-2490] overwriting previous definition of module DCM_PS [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10771]
-WARNING: [Synth 8-2490] overwriting previous definition of module DCM_SP [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10829]
-WARNING: [Synth 8-2490] overwriting previous definition of module DDRMC [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:10874]
-WARNING: [Synth 8-2490] overwriting previous definition of module DDRMC_RIU [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:11920]
-WARNING: [Synth 8-2490] overwriting previous definition of module DNA_PORT [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:11968]
-WARNING: [Synth 8-2490] overwriting previous definition of module DNA_PORTE2 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:11982]
-WARNING: [Synth 8-2490] overwriting previous definition of module DPHY_DIFFINBUF [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:11999]
-WARNING: [Synth 8-2490] overwriting previous definition of module DPLL [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:12021]
-WARNING: [Synth 8-2490] overwriting previous definition of module DSP48 [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:12105]
-INFO: [Common 17-14] Message 'Synth 8-2490' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1897.566 ; gain = 77.496
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'EX' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
-INFO: [Synth 8-6157] synthesizing module 'ADD32' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
-INFO: [Synth 8-6157] synthesizing module 'ADD1' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD1' (1#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD8' (2#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v:22]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
-WARNING: [Synth 8-689] width (1) of port connection 'cout' does not match port width (8) of module 'ADD8' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'ADD32' (3#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:23]
-WARNING: [Synth 8-3848] Net add_cin in module/entity ALU does not have driver. [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (4#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v:24]
-INFO: [Synth 8-6157] synthesizing module 'shifter' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'shifter' (5#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'EX' (6#1) [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v:24]
-WARNING: [Synth 8-3331] design EX has unconnected port reset
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[31]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[30]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[29]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[28]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[27]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[26]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[25]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[24]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[23]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[22]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[21]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[20]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[19]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[18]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[17]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[16]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[15]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[14]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[13]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[12]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[11]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[10]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[9]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[8]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[7]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[6]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[5]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[4]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[3]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[2]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[1]
-WARNING: [Synth 8-3331] design EX has unconnected port i_operand_3[0]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1928.785 ; gain = 108.715
----------------------------------------------------------------------------------
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 2150.109 ; gain = 1113.215
+open_report: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2154.074 ; gain = 3.965
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+close_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
 
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1940.688 ; gain = 120.617
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1940.688 ; gain = 120.617
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1940.688 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 6 IBUFs to IO ports without IO buffers.
-INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers.
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
 
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 1940.688 ; gain = 120.617
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2342.598 ; gain = 21.172
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3459.379 ; gain = 1116.781
+set_property PROGRAM.FILE {C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'Pipeline_md/your_instance_name' at location 'uuid_779C37D0922D56279C28BE51A6CD1A35' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"Pipeline_md/your_instance_name"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"Pipeline_md/your_instance_name"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2020-May-03 16:53:30
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"Pipeline_md/your_instance_name"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"Pipeline_md/your_instance_name"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2020-May-03 16:53:33
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/q1109/OneDrive/RISC_V/RISC_V.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {C:/Users/q1109/OneDrive/RISC_V/RISC_V.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
 exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  3 16:53:55 2020...

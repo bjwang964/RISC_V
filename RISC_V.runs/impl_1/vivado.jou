@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Apr  9 16:42:25 2020
-# Process ID: 8312
+# Start of session at: Sun May  3 16:48:00 2020
+# Process ID: 6092
 # Current directory: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1
-# Command line: vivado.exe -log Pipeline.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Pipeline.tcl -notrace
-# Log file: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/Pipeline.vdi
+# Command line: vivado.exe -log CPU.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CPU.tcl -notrace
+# Log file: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/CPU.vdi
 # Journal file: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source Pipeline.tcl -notrace
+source CPU.tcl -notrace

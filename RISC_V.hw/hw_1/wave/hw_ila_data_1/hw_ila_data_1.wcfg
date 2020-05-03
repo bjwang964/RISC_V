@@ -11,50 +11,35 @@
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
       <ZoomEndTime time="2049fs"></ZoomEndTime>
-      <Cursor1Time time="73fs"></Cursor1Time>
+      <Cursor1Time time="1445fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="234"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="266"></NameColumnWidth>
+      <ValueColumnWidth column_width="158"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="3" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="o_instr" type="array">
+   <wvobject fp_name="Pipeline_md/i_pc" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">o_instr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_instr[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="i_pc" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">i_pc[19:0]</obj_property>
+      <obj_property name="ElementShortName">Pipeline_md/i_pc[19:0]</obj_property>
       <obj_property name="ObjectShortName">i_pc[19:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="clk_IBUF_BUFG" type="logic">
+   <wvobject fp_name="Pipeline_md/o_instr" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">clk_IBUF_BUFG</obj_property>
-      <obj_property name="ObjectShortName">clk_IBUF_BUFG</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="wb_dec_push_reg_addr" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">wb_dec_push_reg_addr[4:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_dec_push_reg_addr[4:0]</obj_property>
+      <obj_property name="ElementShortName">Pipeline_md/o_instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_instr[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="wb_dec_push_reg_data" type="array">
+   <wvobject fp_name="Pipeline_md/test_data" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">wb_dec_push_reg_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">wb_dec_push_reg_data[31:0]</obj_property>
+      <obj_property name="ElementShortName">Pipeline_md/test_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_data[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

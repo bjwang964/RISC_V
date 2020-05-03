@@ -51,7 +51,7 @@ module div_freq(
             begin
                 counter = 0;
                 d_clk = ~d_clk;
-            end;
+            end
         end
     end
     

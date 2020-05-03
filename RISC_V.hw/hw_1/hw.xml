@@ -7,15 +7,19 @@
   <device name="xc7a35t_0" gui_info="dashboard1=dashboard_1[xc7a35t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a35t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a35t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a35t_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7a35t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a35t_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/Pipeline.ltx"/>
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/Pipeline.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/Pipeline.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/CPU.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/CPU.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/CPU.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
     <Object name="" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="Pipeline_md/your_instance_name" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="dbg" gui_info="">
@@ -28,6 +32,12 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="Pipeline_md/clk" gui_info="Trigger Setup=0"/>
+    <Object name="Pipeline_md/id_ex_in_operand_1[4:0]" gui_info="Trigger Setup=0"/>
+    <Object name="Pipeline_md/id_ex_in_operand_2[31:0]" gui_info="Trigger Setup=1"/>
+    <Object name="Pipeline_md/o_instr[31:0]" gui_info=""/>
+    <Object name="Pipeline_md/wb_dec_push_reg_addr[4:0]" gui_info=""/>
+    <Object name="Pipeline_md/wb_dec_push_reg_data[31:0]" gui_info=""/>
     <Object name="clk_IBUF_BUFG" gui_info=""/>
     <Object name="i_pc[19:0]" gui_info=""/>
     <Object name="id_ex_in_operand_1[31:0]" gui_info=""/>
@@ -37,6 +47,377 @@
     <Object name="wb_dec_push_reg_data[31:0]" gui_info="Trigger Setup=1"/>
   </ObjectList>
   <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/clk"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq20&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[19:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/i_pc[19]"/>
+        <net name="Pipeline_md/i_pc[18]"/>
+        <net name="Pipeline_md/i_pc[17]"/>
+        <net name="Pipeline_md/i_pc[16]"/>
+        <net name="Pipeline_md/i_pc[15]"/>
+        <net name="Pipeline_md/i_pc[14]"/>
+        <net name="Pipeline_md/i_pc[13]"/>
+        <net name="Pipeline_md/i_pc[12]"/>
+        <net name="Pipeline_md/i_pc[11]"/>
+        <net name="Pipeline_md/i_pc[10]"/>
+        <net name="Pipeline_md/i_pc[9]"/>
+        <net name="Pipeline_md/i_pc[8]"/>
+        <net name="Pipeline_md/i_pc[7]"/>
+        <net name="Pipeline_md/i_pc[6]"/>
+        <net name="Pipeline_md/i_pc[5]"/>
+        <net name="Pipeline_md/i_pc[4]"/>
+        <net name="Pipeline_md/i_pc[3]"/>
+        <net name="Pipeline_md/i_pc[2]"/>
+        <net name="Pipeline_md/i_pc[1]"/>
+        <net name="Pipeline_md/i_pc[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq5&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq5&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[4:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq5&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/id_ex_in_operand_1[4]"/>
+        <net name="Pipeline_md/id_ex_in_operand_1[3]"/>
+        <net name="Pipeline_md/id_ex_in_operand_1[2]"/>
+        <net name="Pipeline_md/id_ex_in_operand_1[1]"/>
+        <net name="Pipeline_md/id_ex_in_operand_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/id_ex_in_operand_2[31]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[30]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[29]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[28]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[27]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[26]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[25]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[24]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[23]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[22]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[21]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[20]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[19]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[18]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[17]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[16]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[15]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[14]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[13]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[12]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[11]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[10]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[9]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[8]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[7]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[6]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[5]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[4]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[3]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[2]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[1]"/>
+        <net name="Pipeline_md/id_ex_in_operand_2[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/o_instr[31]"/>
+        <net name="Pipeline_md/o_instr[30]"/>
+        <net name="Pipeline_md/o_instr[29]"/>
+        <net name="Pipeline_md/o_instr[28]"/>
+        <net name="Pipeline_md/o_instr[27]"/>
+        <net name="Pipeline_md/o_instr[26]"/>
+        <net name="Pipeline_md/o_instr[25]"/>
+        <net name="Pipeline_md/o_instr[24]"/>
+        <net name="Pipeline_md/o_instr[23]"/>
+        <net name="Pipeline_md/o_instr[22]"/>
+        <net name="Pipeline_md/o_instr[21]"/>
+        <net name="Pipeline_md/o_instr[20]"/>
+        <net name="Pipeline_md/o_instr[19]"/>
+        <net name="Pipeline_md/o_instr[18]"/>
+        <net name="Pipeline_md/o_instr[17]"/>
+        <net name="Pipeline_md/o_instr[16]"/>
+        <net name="Pipeline_md/o_instr[15]"/>
+        <net name="Pipeline_md/o_instr[14]"/>
+        <net name="Pipeline_md/o_instr[13]"/>
+        <net name="Pipeline_md/o_instr[12]"/>
+        <net name="Pipeline_md/o_instr[11]"/>
+        <net name="Pipeline_md/o_instr[10]"/>
+        <net name="Pipeline_md/o_instr[9]"/>
+        <net name="Pipeline_md/o_instr[8]"/>
+        <net name="Pipeline_md/o_instr[7]"/>
+        <net name="Pipeline_md/o_instr[6]"/>
+        <net name="Pipeline_md/o_instr[5]"/>
+        <net name="Pipeline_md/o_instr[4]"/>
+        <net name="Pipeline_md/o_instr[3]"/>
+        <net name="Pipeline_md/o_instr[2]"/>
+        <net name="Pipeline_md/o_instr[1]"/>
+        <net name="Pipeline_md/o_instr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/test_data[31]"/>
+        <net name="Pipeline_md/test_data[30]"/>
+        <net name="Pipeline_md/test_data[29]"/>
+        <net name="Pipeline_md/test_data[28]"/>
+        <net name="Pipeline_md/test_data[27]"/>
+        <net name="Pipeline_md/test_data[26]"/>
+        <net name="Pipeline_md/test_data[25]"/>
+        <net name="Pipeline_md/test_data[24]"/>
+        <net name="Pipeline_md/test_data[23]"/>
+        <net name="Pipeline_md/test_data[22]"/>
+        <net name="Pipeline_md/test_data[21]"/>
+        <net name="Pipeline_md/test_data[20]"/>
+        <net name="Pipeline_md/test_data[19]"/>
+        <net name="Pipeline_md/test_data[18]"/>
+        <net name="Pipeline_md/test_data[17]"/>
+        <net name="Pipeline_md/test_data[16]"/>
+        <net name="Pipeline_md/test_data[15]"/>
+        <net name="Pipeline_md/test_data[14]"/>
+        <net name="Pipeline_md/test_data[13]"/>
+        <net name="Pipeline_md/test_data[12]"/>
+        <net name="Pipeline_md/test_data[11]"/>
+        <net name="Pipeline_md/test_data[10]"/>
+        <net name="Pipeline_md/test_data[9]"/>
+        <net name="Pipeline_md/test_data[8]"/>
+        <net name="Pipeline_md/test_data[7]"/>
+        <net name="Pipeline_md/test_data[6]"/>
+        <net name="Pipeline_md/test_data[5]"/>
+        <net name="Pipeline_md/test_data[4]"/>
+        <net name="Pipeline_md/test_data[3]"/>
+        <net name="Pipeline_md/test_data[2]"/>
+        <net name="Pipeline_md/test_data[1]"/>
+        <net name="Pipeline_md/test_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq5&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq5&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[4:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq5&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/wb_dec_push_reg_addr[4]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_addr[3]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_addr[2]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_addr[1]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/wb_dec_push_reg_data[31]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[30]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[29]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[28]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[27]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[26]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[25]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[24]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[23]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[22]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[21]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[20]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[19]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[18]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[17]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[16]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[15]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[14]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[13]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[12]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[11]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[10]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[9]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[8]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[7]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[6]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[5]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[4]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[3]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[2]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[1]"/>
+        <net name="Pipeline_md/wb_dec_push_reg_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="Pipeline_md/wdata[31]"/>
+        <net name="Pipeline_md/wdata[30]"/>
+        <net name="Pipeline_md/wdata[29]"/>
+        <net name="Pipeline_md/wdata[28]"/>
+        <net name="Pipeline_md/wdata[27]"/>
+        <net name="Pipeline_md/wdata[26]"/>
+        <net name="Pipeline_md/wdata[25]"/>
+        <net name="Pipeline_md/wdata[24]"/>
+        <net name="Pipeline_md/wdata[23]"/>
+        <net name="Pipeline_md/wdata[22]"/>
+        <net name="Pipeline_md/wdata[21]"/>
+        <net name="Pipeline_md/wdata[20]"/>
+        <net name="Pipeline_md/wdata[19]"/>
+        <net name="Pipeline_md/wdata[18]"/>
+        <net name="Pipeline_md/wdata[17]"/>
+        <net name="Pipeline_md/wdata[16]"/>
+        <net name="Pipeline_md/wdata[15]"/>
+        <net name="Pipeline_md/wdata[14]"/>
+        <net name="Pipeline_md/wdata[13]"/>
+        <net name="Pipeline_md/wdata[12]"/>
+        <net name="Pipeline_md/wdata[11]"/>
+        <net name="Pipeline_md/wdata[10]"/>
+        <net name="Pipeline_md/wdata[9]"/>
+        <net name="Pipeline_md/wdata[8]"/>
+        <net name="Pipeline_md/wdata[7]"/>
+        <net name="Pipeline_md/wdata[6]"/>
+        <net name="Pipeline_md/wdata[5]"/>
+        <net name="Pipeline_md/wdata[4]"/>
+        <net name="Pipeline_md/wdata[3]"/>
+        <net name="Pipeline_md/wdata[2]"/>
+        <net name="Pipeline_md/wdata[1]"/>
+        <net name="Pipeline_md/wdata[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
@@ -110,7 +491,7 @@
         <net name="fd/o_instr[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq20&apos;hX_XXXX"/>
@@ -254,7 +635,7 @@
         <net name="id_ex_in_operand_2[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -306,7 +687,7 @@
         <net name="o_instr[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq5&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq5&apos;h0B"/>
@@ -331,7 +712,7 @@
         <net name="wb_dec_push_reg_addr[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;h0000_0017"/>

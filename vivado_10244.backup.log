@@ -1,0 +1,2133 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 24 12:59:33 2020
+# Process ID: 10244
+# Current directory: C:/Users/q1109/OneDrive/RISC_V
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16000 C:\Users\q1109\OneDrive\RISC_V\RISC_V.xpr
+# Log file: C:/Users/q1109/OneDrive/RISC_V/vivado.log
+# Journal file: C:/Users/q1109/OneDrive/RISC_V\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/q1109/OneDrive/RISC_V/RISC_V.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/q1109/OneDrive/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:38 ; elapsed = 00:02:04 . Memory (MB): peak = 915.180 ; gain = 276.168
+update_compile_order -fileset sources_1
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+launch_runs -jobs 8 ROM_8_synth_1
+[Fri Apr 24 13:14:57 2020] Launched ROM_8_synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/ROM_8_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run ROM_8_synth_1
+launch_runs ROM_8_synth_1 -jobs 8
+[Fri Apr 24 13:16:11 2020] Launched ROM_8_synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/ROM_8_synth_1/runme.log
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset ROM_8] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [Project 1-386] Moving file 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci' from fileset 'ROM_8' to fileset 'sources_1'.
+update_compile_order -fileset sources_1
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ROM_8, cache-ID = 8e7d261977365434; cache size = 52.370 MB.
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci'
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM32.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM_init.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/ROM_8.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/sim/myip_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/IO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:141]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:144]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:146]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:148]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:149]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:168]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:171]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:173]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:175]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module de_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fet_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ins_val
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module operand_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/pc_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1026.117 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xelab -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_ex_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:143]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_mem_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:144]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_wb_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:145]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:344]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.myip_v1_0_S00_AXI_default
+Compiling module xil_defaultlib.myip_v1_0
+Compiling module xil_defaultlib.myip_0
+Compiling module xil_defaultlib.AXI
+Compiling module xil_defaultlib.IO
+Compiling module xil_defaultlib.PC
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.ROM_8
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.dec
+Compiling module xil_defaultlib.PHT
+Compiling module xil_defaultlib.BTB
+Compiling module xil_defaultlib.pc_sel
+Compiling module xil_defaultlib.adder4
+Compiling module xil_defaultlib.Instr_Fetch
+Compiling module xil_defaultlib.fet_dec
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.operand_generator
+Compiling module xil_defaultlib.Instr_Decode
+Compiling module xil_defaultlib.ins_val
+Compiling module xil_defaultlib.de_ex
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ADD1
+Compiling module xil_defaultlib.ADD8
+Compiling module xil_defaultlib.ADD32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.ex_mem
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM32
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.Pipeline
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Apr 24 13:19:22 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Apr 24 13:19:22 2020...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1026.117 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '23' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.C0.Pipeline_md.MEM0.RAM320.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1031.223 ; gain = 0.184
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:48 . Memory (MB): peak = 1031.223 ; gain = 5.105
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.C0.Pipeline_md.MEM0.RAM320.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 us
+run 10 us
+run 10 us
+save_wave_config {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1323.352 ; gain = 0.000
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ROM_8, cache-ID = f6df0d9d0ec3fdd5; cache size = 52.370 MB.
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci'
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM32.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM_init.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/ROM_8.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/sim/myip_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/IO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:141]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:144]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:146]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:148]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:149]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:168]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:171]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:173]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:175]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module de_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fet_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ins_val
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module operand_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/pc_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1323.352 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xelab -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_ex_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:143]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_mem_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:144]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_wb_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:145]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:344]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.myip_v1_0_S00_AXI_default
+Compiling module xil_defaultlib.myip_v1_0
+Compiling module xil_defaultlib.myip_0
+Compiling module xil_defaultlib.AXI
+Compiling module xil_defaultlib.IO
+Compiling module xil_defaultlib.PC
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.ROM_8
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.dec
+Compiling module xil_defaultlib.PHT
+Compiling module xil_defaultlib.BTB
+Compiling module xil_defaultlib.pc_sel
+Compiling module xil_defaultlib.adder4
+Compiling module xil_defaultlib.Instr_Fetch
+Compiling module xil_defaultlib.fet_dec
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.operand_generator
+Compiling module xil_defaultlib.Instr_Decode
+Compiling module xil_defaultlib.ins_val
+Compiling module xil_defaultlib.de_ex
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ADD1
+Compiling module xil_defaultlib.ADD8
+Compiling module xil_defaultlib.ADD32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.ex_mem
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM32
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.Pipeline
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.C0.Pipeline_md.MEM0.RAM320.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1323.352 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+launch_runs -jobs 8 ROM_8_synth_1
+[Fri Apr 24 13:27:18 2020] Launched ROM_8_synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/ROM_8_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run ROM_8_synth_1
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset ROM_8] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [Project 1-386] Moving file 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci' from fileset 'ROM_8' to fileset 'sources_1'.
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+launch_runs -jobs 8 ROM_8_synth_1
+[Fri Apr 24 13:28:10 2020] Launched ROM_8_synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/ROM_8_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM32.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM_init.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/ROM_8.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/sim/myip_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/IO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:141]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:144]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:146]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:148]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:149]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:168]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:171]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:173]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:175]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module de_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fet_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ins_val
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module operand_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/pc_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1388.191 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xelab -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_ex_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:143]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_mem_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:144]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_wb_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:145]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:344]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.myip_v1_0_S00_AXI_default
+Compiling module xil_defaultlib.myip_v1_0
+Compiling module xil_defaultlib.myip_0
+Compiling module xil_defaultlib.AXI
+Compiling module xil_defaultlib.IO
+Compiling module xil_defaultlib.PC
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.ROM_8
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.dec
+Compiling module xil_defaultlib.PHT
+Compiling module xil_defaultlib.BTB
+Compiling module xil_defaultlib.pc_sel
+Compiling module xil_defaultlib.adder4
+Compiling module xil_defaultlib.Instr_Fetch
+Compiling module xil_defaultlib.fet_dec
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.operand_generator
+Compiling module xil_defaultlib.Instr_Decode
+Compiling module xil_defaultlib.ins_val
+Compiling module xil_defaultlib.de_ex
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ADD1
+Compiling module xil_defaultlib.ADD8
+Compiling module xil_defaultlib.ADD32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.ex_mem
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM32
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.Pipeline
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1388.191 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.C0.Pipeline_md.MEM0.RAM320.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1388.191 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1388.191 ; gain = 0.000
+run all
+save_wave_config {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset ROM_8] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [Project 1-386] Moving file 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci' from fileset 'ROM_8' to fileset 'sources_1'.
+update_compile_order -fileset sources_1
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+launch_runs -jobs 8 ROM_8_synth_1
+[Fri Apr 24 14:58:32 2020] Launched ROM_8_synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/ROM_8_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM32.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM_init.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/ROM_8.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/sim/myip_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/IO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:141]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:144]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:146]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:148]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:149]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:168]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:171]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:173]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:175]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module de_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fet_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ins_val
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module operand_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/pc_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1588.930 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xelab -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_ex_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:143]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_mem_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:144]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_wb_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:145]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:344]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.myip_v1_0_S00_AXI_default
+Compiling module xil_defaultlib.myip_v1_0
+Compiling module xil_defaultlib.myip_0
+Compiling module xil_defaultlib.AXI
+Compiling module xil_defaultlib.IO
+Compiling module xil_defaultlib.PC
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.ROM_8
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.dec
+Compiling module xil_defaultlib.PHT
+Compiling module xil_defaultlib.BTB
+Compiling module xil_defaultlib.pc_sel
+Compiling module xil_defaultlib.adder4
+Compiling module xil_defaultlib.Instr_Fetch
+Compiling module xil_defaultlib.fet_dec
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.operand_generator
+Compiling module xil_defaultlib.Instr_Decode
+Compiling module xil_defaultlib.ins_val
+Compiling module xil_defaultlib.de_ex
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ADD1
+Compiling module xil_defaultlib.ADD8
+Compiling module xil_defaultlib.ADD32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.ex_mem
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM32
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.Pipeline
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1588.930 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.C0.Pipeline_md.MEM0.RAM320.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1588.930 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1588.930 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset ROM_8] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [Project 1-386] Moving file 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci' from fileset 'ROM_8' to fileset 'sources_1'.
+update_compile_order -fileset sources_1
+generate_target all [get_files  C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_8'...
+catch { config_ip_cache -export [get_ips -all ROM_8] }
+export_ip_user_files -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci]
+launch_runs -jobs 8 ROM_8_synth_1
+[Fri Apr 24 15:02:50 2020] Launched ROM_8_synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/ROM_8_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/ROM_8.xci] -directory C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files -ipstatic_source_dir C:/Users/q1109/OneDrive/RISC_V/RISC_V.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/modelsim} {questa=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/questa} {riviera=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/riviera} {activehdl=C:/Users/q1109/OneDrive/RISC_V/RISC_V.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM32.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/RAM_init.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/ROM_8.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim/init_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/RAM32/sim/RAM32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/ROM_8/sim/ROM_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/hdl/myip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/ip/myip_0/sim/myip_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myip_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/IO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instr_Fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/PHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_ce' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:137]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_write_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:139]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:141]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:144]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_reg_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:146]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_mem_en' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:148]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:149]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:164]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:166]
+WARNING: [VRFC 10-3380] identifier 'ex_mem_in_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:168]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_we' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:171]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_csr_write_addr' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:173]
+WARNING: [VRFC 10-3380] identifier 'mem_wb_in_ex_res' is used before its declaration [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:175]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/adder4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/de_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module de_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/fet_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fet_dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ins_val.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ins_val
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/operand_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module operand_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/pc_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1851.512 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+"xelab -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_ex_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:143]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_mem_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:144]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 5 for port 'i_wb_push_csr_addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Instr_Decode.v:145]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:34]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:35]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:36]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'cout' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/ADD32.v:37]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'addr' [C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sources_1/new/Pipeline.v:344]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.myip_v1_0_S00_AXI_default
+Compiling module xil_defaultlib.myip_v1_0
+Compiling module xil_defaultlib.myip_0
+Compiling module xil_defaultlib.AXI
+Compiling module xil_defaultlib.IO
+Compiling module xil_defaultlib.PC
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.ROM_8
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.dec
+Compiling module xil_defaultlib.PHT
+Compiling module xil_defaultlib.BTB
+Compiling module xil_defaultlib.pc_sel
+Compiling module xil_defaultlib.adder4
+Compiling module xil_defaultlib.Instr_Fetch
+Compiling module xil_defaultlib.fet_dec
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.operand_generator
+Compiling module xil_defaultlib.Instr_Decode
+Compiling module xil_defaultlib.ins_val
+Compiling module xil_defaultlib.de_ex
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.ADD1
+Compiling module xil_defaultlib.ADD8
+Compiling module xil_defaultlib.ADD32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.ex_mem
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM32
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.Pipeline
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1851.512 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -view {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.C0.Pipeline_md.MEM0.RAM320.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1851.512 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1851.512 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Fri Apr 24 15:05:11 2020] Launched synth_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/synth_1/runme.log
+[Fri Apr 24 15:05:11 2020] Launched impl_1...
+Run output will be captured here: C:/Users/q1109/OneDrive/RISC_V/RISC_V.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.215 . Memory (MB): peak = 1851.512 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1190 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2403.109 ; gain = 0.000
+Restored from archive | CPU: 3.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2403.109 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2403.109 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 86 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 80 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+open_run: Time (s): cpu = 00:00:42 ; elapsed = 00:00:37 . Memory (MB): peak = 2525.363 ; gain = 673.852
+open_report: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2537.828 ; gain = 12.359
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_simulation -mode post-implementation -type timing
+Command: launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/testbench_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/testbench_time_impl.sdf"
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/ALU0/add_op1_reg\[29\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/ALU0/add_op2_reg\[10\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/ALU0/add_op2_reg\[12\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/ALU0/add_op2_reg\[13\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/ALU0/add_op2_reg\[8\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/shifter0/temp_reg\[19\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/shifter0/temp_reg\[20\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/shifter0/temp_reg\[24\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+WARNING: [Timing 38-5] [SDFWriter-1] Zero Delays will be used for arc D -> Q on instance 'Pipeline_md/EX0/shifter0/temp_reg\[25\]' as a valid location was not found for one of the pins. Please check the part and placement setup to ensure placement completes successfully
+write_sdf: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2641.230 ; gain = 0.000
+INFO: [SIM-utils-36] Netlist generated:C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/testbench_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/testbench_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/RAM32.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/RAM_init.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/init_rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/ROM_8.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/init_rom.coe'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/testbench_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CFGLUT5_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD1
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD10
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD11
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD12
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD13
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD14
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD15
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD16
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD17
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD18
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD19
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD2
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD20
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD21
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD22
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD23
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD24
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD25
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD26
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD27
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD28
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD29
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD3
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD30
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD31
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD32
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD33
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD34
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD35
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD36
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD37
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD38
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD39
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD4
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD40
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD41
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD42
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD43
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD44
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD45
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD46
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD47
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD48
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD49
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD5
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD50
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD51
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD52
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD53
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD54
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD55
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD56
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD57
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD58
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD59
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD6
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD60
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD61
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD62
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD63
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD64
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD65
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD66
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD67
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD68
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD69
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD7
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD70
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD71
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD72
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD73
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD74
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD75
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD76
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD77
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD78
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD79
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD8
+INFO: [VRFC 10-311] analyzing module CFGLUT5_HD9
+INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32M_HD80
+INFO: [VRFC 10-311] analyzing module RAM32M_HD81
+INFO: [VRFC 10-311] analyzing module RAM32M_HD82
+INFO: [VRFC 10-311] analyzing module RAM32M_HD83
+INFO: [VRFC 10-311] analyzing module RAM32M_HD84
+INFO: [VRFC 10-311] analyzing module clk_x_pntrs
+INFO: [VRFC 10-311] analyzing module clk_x_pntrs_7
+INFO: [VRFC 10-311] analyzing module dbg_hub
+INFO: [VRFC 10-311] analyzing module dmem
+INFO: [VRFC 10-311] analyzing module dmem_13
+INFO: [VRFC 10-311] analyzing module fifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_ramfifo__parameterized0
+INFO: [VRFC 10-311] analyzing module fifo_generator_top
+INFO: [VRFC 10-311] analyzing module fifo_generator_top__parameterized0
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_4
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_4__parameterized0
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_4_synth
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_4_synth__parameterized0
+INFO: [VRFC 10-311] analyzing module ltlib_v1_0_0_bscan
+INFO: [VRFC 10-311] analyzing module memory
+INFO: [VRFC 10-311] analyzing module memory__parameterized0
+INFO: [VRFC 10-311] analyzing module rd_bin_cntr
+INFO: [VRFC 10-311] analyzing module rd_bin_cntr_18
+INFO: [VRFC 10-311] analyzing module rd_fwft
+INFO: [VRFC 10-311] analyzing module rd_handshaking_flags
+INFO: [VRFC 10-311] analyzing module rd_handshaking_flags__parameterized0
+INFO: [VRFC 10-311] analyzing module rd_logic
+INFO: [VRFC 10-311] analyzing module rd_logic__parameterized0
+INFO: [VRFC 10-311] analyzing module rd_status_flags_as
+INFO: [VRFC 10-311] analyzing module rd_status_flags_as_17
+INFO: [VRFC 10-311] analyzing module reset_blk_ramfifo
+INFO: [VRFC 10-311] analyzing module reset_blk_ramfifo_8
+INFO: [VRFC 10-311] analyzing module synchronizer_ff
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_1
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_10
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_11
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_12
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_2
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_3
+INFO: [VRFC 10-311] analyzing module synchronizer_ff_9
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_19
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_20
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_21
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_22
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_4
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_5
+INFO: [VRFC 10-311] analyzing module synchronizer_ff__parameterized0_6
+INFO: [VRFC 10-311] analyzing module wr_bin_cntr
+INFO: [VRFC 10-311] analyzing module wr_bin_cntr_16
+INFO: [VRFC 10-311] analyzing module wr_handshaking_flags
+INFO: [VRFC 10-311] analyzing module wr_handshaking_flags_15
+INFO: [VRFC 10-311] analyzing module wr_logic
+INFO: [VRFC 10-311] analyzing module wr_logic__parameterized0
+INFO: [VRFC 10-311] analyzing module wr_status_flags_as
+INFO: [VRFC 10-311] analyzing module wr_status_flags_as_14
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_addr_ctl
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_bscan_switch
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_burst_wdlen_ctl
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_bus_ctl
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_bus_ctl_cnt
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_bus_ctl_flg
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_bus_ctl_flg__parameterized0
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_bus_mstr2sl_if
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_cmd_decode
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_ctl_reg
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_ctl_reg__parameterized0
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_ctl_reg__parameterized1
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_ctl_reg__parameterized2
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_icon
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_icon2xsdb
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_if
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_if_static_status
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_rdfifo
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_rdreg
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_stat
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_stat_reg
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_stat_reg__parameterized0
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_stat_reg__parameterized0_0
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_sync
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_wrfifo
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_wrreg
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_xsdbm
+INFO: [VRFC 10-311] analyzing module xsdbm_v3_0_0_xsdbm_id
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module AXI
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-311] analyzing module IO
+INFO: [VRFC 10-311] analyzing module Instr_Decode
+INFO: [VRFC 10-311] analyzing module Instr_Fetch
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-311] analyzing module Pipeline
+INFO: [VRFC 10-311] analyzing module RAM32
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-311] analyzing module ROM_8
+INFO: [VRFC 10-311] analyzing module WB
+INFO: [VRFC 10-311] analyzing module adder4
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-311] analyzing module de_ex
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-311] analyzing module fet_dec
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-311] analyzing module ins_val
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-311] analyzing module myip_0
+INFO: [VRFC 10-311] analyzing module myip_0_myip_v1_0
+INFO: [VRFC 10-311] analyzing module myip_0_myip_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-311] analyzing module RAM32__bindec
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized1
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized10
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized11
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized12
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized13
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized2
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized3
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized4
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized5
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized6
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized7
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized8
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_prim_wrapper_init__parameterized9
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_v8_4_4
+INFO: [VRFC 10-311] analyzing module RAM32__blk_mem_gen_v8_4_4_synth
+INFO: [VRFC 10-311] analyzing module ROM_8_dist_mem_gen_v8_0_13
+INFO: [VRFC 10-311] analyzing module ROM_8_dist_mem_gen_v8_0_13_synth
+INFO: [VRFC 10-311] analyzing module ROM_8_rom
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_4_synth
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_cap_addrgen
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_cap_ctrl_legacy
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_cap_sample_counter
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_cap_window_counter
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_core
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_register
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_reset_ctrl
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_trace_memory
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_trig_match
+INFO: [VRFC 10-311] analyzing module ila_0_ila_v6_2_10_ila_trigger
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_15
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_4
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA__parameterized0_10
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA__parameterized2_42
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA__parameterized2_50
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice_14
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice_16
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice_3
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice_5
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice_8
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_1
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_11
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_12
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_13
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_2
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_6
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized0_7
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_43
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized1_51
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_44
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_all_typeA_slice__parameterized2_52
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA__parameterized0_9
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA_nodelay
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA_nodelay_41
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_allx_typeA_nodelay_49
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_async_edge_xfer
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_async_edge_xfer_17
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_async_edge_xfer_18
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_async_edge_xfer_19
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut4
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut4_45
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut5
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut5_39
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut5_46
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut6
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut6_47
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut6__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut7
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_cfglut7_38
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_generic_memrd
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match__parameterized0_0
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match_nodelay
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match_nodelay_40
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_match_nodelay_48
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_rising_edge_detection
+INFO: [VRFC 10-311] analyzing module ila_0_ltlib_v1_0_0_rising_edge_detection_20
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized19
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized20
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized21
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized22
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized34
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized35
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized36
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized37
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized38
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized39
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized40
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized41
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized42
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized43
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized44
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized45
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized47
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized49
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg__parameterized52
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_24
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_25
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_26
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_27
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_30
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_32
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_33
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_34
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_35
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl_36
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_28
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_ctl__parameterized1_31
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s__parameterized4
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_p2s__parameterized5
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stat
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stat_21
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stat_22
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stat_23
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stat_29
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stat_37
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stream
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_reg_stream__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_0_xsdbs_v1_0_2_xsdbs
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/q1109/OneDrive/RISC_V/RISC_V.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 2641.230 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '19' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim'
+"xelab -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot testbench_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 06da8b95d90b43f49b8005c753820d43 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot testbench_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "testbench_time_impl.sdf", for root module "testbench/C0".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "testbench_time_impl.sdf", for root module "testbench/C0".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.FDSE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module xil_defaultlib.myip_0_myip_v1_0_S00_AXI
+Compiling module xil_defaultlib.myip_0_myip_v1_0
+Compiling module xil_defaultlib.myip_0
+Compiling module xil_defaultlib.AXI
+Compiling module xil_defaultlib.IO
+Compiling module simprims_ver.latchsre_ldce
+Compiling module simprims_ver.LDCE
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.EX
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.MUXF8
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.Instr_Decode
+Compiling module xil_defaultlib.BTB
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.PHT
+Compiling module simprims_ver.GND
+Compiling module xil_defaultlib.ROM_8_rom
+Compiling module xil_defaultlib.ROM_8_dist_mem_gen_v8_0_13_synth
+Compiling module xil_defaultlib.ROM_8_dist_mem_gen_v8_0_13
+Compiling module xil_defaultlib.ROM_8
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.adder4
+Compiling module xil_defaultlib.Instr_Fetch
+Compiling module xil_defaultlib.RAM32__bindec
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_mux
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB18E1(INIT_00=256'b0101010101...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(RDADDR_COLLISION_HWCONF...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0111110100...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0111111111...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_01=256'b0100000001...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_wrapper_...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_prim_width__p...
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_top
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_v8_4_4_synth
+Compiling module xil_defaultlib.RAM32__blk_mem_gen_v8_4_4
+Compiling module xil_defaultlib.RAM32
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.WB
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.de_ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.fet_dec
+Compiling module xil_defaultlib.ins_val
+Compiling module xil_defaultlib.mem_wb
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module simprims_ver.RAMB18E1(DOA_REG=1,DOB_REG=1,REA...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module simprims_ver.RAMB36E1(DOA_REG=1,DOB_REG=1,REA...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_blk_mem...
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4_synth
+Compiling module xil_defaultlib.ila_0_blk_mem_gen_v8_4_4
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_trace_memo...
+Compiling module simprims_ver.SRL16E_default
+Compiling module simprims_ver.SRLC32E_default
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut6__para...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut7
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut7_38
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut6
+Compiling module simprims_ver.SRLC16E_default
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut4_45
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut5_46
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut6_47
+Compiling module xil_defaultlib.CFGLUT5_UNIQ_BASE_
+Compiling module xil_defaultlib.CFGLUT5_HD1
+Compiling module xil_defaultlib.CFGLUT5_HD2
+Compiling module xil_defaultlib.CFGLUT5_HD3
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD4
+Compiling module xil_defaultlib.CFGLUT5_HD5
+Compiling module xil_defaultlib.CFGLUT5_HD6
+Compiling module xil_defaultlib.CFGLUT5_HD7
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA_no...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match_nodelay...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_cap_sample...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut4
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut5
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_cfglut5_39
+Compiling module xil_defaultlib.CFGLUT5_HD8
+Compiling module xil_defaultlib.CFGLUT5_HD9
+Compiling module xil_defaultlib.CFGLUT5_HD10
+Compiling module xil_defaultlib.CFGLUT5_HD11
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD12
+Compiling module xil_defaultlib.CFGLUT5_HD13
+Compiling module xil_defaultlib.CFGLUT5_HD14
+Compiling module xil_defaultlib.CFGLUT5_HD15
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA_no...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match_nodelay
+Compiling module xil_defaultlib.CFGLUT5_HD16
+Compiling module xil_defaultlib.CFGLUT5_HD17
+Compiling module xil_defaultlib.CFGLUT5_HD18
+Compiling module xil_defaultlib.CFGLUT5_HD19
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD20
+Compiling module xil_defaultlib.CFGLUT5_HD21
+Compiling module xil_defaultlib.CFGLUT5_HD22
+Compiling module xil_defaultlib.CFGLUT5_HD23
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA_no...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match_nodelay...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_cap_window...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_cap_addrge...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_cap_ctrl_l...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_xsdbs
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_36
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_35
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_34
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_33
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_32
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_30
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stat_29
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_27
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_26
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_25
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl_24
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stat_23
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stat_22
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stat_37
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stat_21
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_ctl
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stream
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stat
+Compiling module xil_defaultlib.ila_0_xsdbs_v1_0_2_reg_stream__p...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_register
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_rising_edge_d...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_rising_edge_d...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_reset_ctrl
+Compiling module xil_defaultlib.CFGLUT5_HD24
+Compiling module xil_defaultlib.CFGLUT5_HD25
+Compiling module xil_defaultlib.CFGLUT5_HD26
+Compiling module xil_defaultlib.CFGLUT5_HD27
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_15
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match
+Compiling module xil_defaultlib.CFGLUT5_HD28
+Compiling module xil_defaultlib.CFGLUT5_HD29
+Compiling module xil_defaultlib.CFGLUT5_HD30
+Compiling module xil_defaultlib.CFGLUT5_HD31
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD32
+Compiling module xil_defaultlib.CFGLUT5_HD33
+Compiling module xil_defaultlib.CFGLUT5_HD34
+Compiling module xil_defaultlib.CFGLUT5_HD35
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD36
+Compiling module xil_defaultlib.CFGLUT5_HD37
+Compiling module xil_defaultlib.CFGLUT5_HD38
+Compiling module xil_defaultlib.CFGLUT5_HD39
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD40
+Compiling module xil_defaultlib.CFGLUT5_HD41
+Compiling module xil_defaultlib.CFGLUT5_HD42
+Compiling module xil_defaultlib.CFGLUT5_HD43
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.CFGLUT5_HD44
+Compiling module xil_defaultlib.CFGLUT5_HD45
+Compiling module xil_defaultlib.CFGLUT5_HD46
+Compiling module xil_defaultlib.CFGLUT5_HD47
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD48
+Compiling module xil_defaultlib.CFGLUT5_HD49
+Compiling module xil_defaultlib.CFGLUT5_HD50
+Compiling module xil_defaultlib.CFGLUT5_HD51
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD52
+Compiling module xil_defaultlib.CFGLUT5_HD53
+Compiling module xil_defaultlib.CFGLUT5_HD54
+Compiling module xil_defaultlib.CFGLUT5_HD55
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.CFGLUT5_HD56
+Compiling module xil_defaultlib.CFGLUT5_HD57
+Compiling module xil_defaultlib.CFGLUT5_HD58
+Compiling module xil_defaultlib.CFGLUT5_HD59
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_4
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.CFGLUT5_HD60
+Compiling module xil_defaultlib.CFGLUT5_HD61
+Compiling module xil_defaultlib.CFGLUT5_HD62
+Compiling module xil_defaultlib.CFGLUT5_HD63
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.CFGLUT5_HD64
+Compiling module xil_defaultlib.CFGLUT5_HD65
+Compiling module xil_defaultlib.CFGLUT5_HD66
+Compiling module xil_defaultlib.CFGLUT5_HD67
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD68
+Compiling module xil_defaultlib.CFGLUT5_HD69
+Compiling module xil_defaultlib.CFGLUT5_HD70
+Compiling module xil_defaultlib.CFGLUT5_HD71
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD72
+Compiling module xil_defaultlib.CFGLUT5_HD73
+Compiling module xil_defaultlib.CFGLUT5_HD74
+Compiling module xil_defaultlib.CFGLUT5_HD75
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.CFGLUT5_HD76
+Compiling module xil_defaultlib.CFGLUT5_HD77
+Compiling module xil_defaultlib.CFGLUT5_HD78
+Compiling module xil_defaultlib.CFGLUT5_HD79
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_trig_match
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_trigger
+Compiling module xil_defaultlib.ila_0_ltlib_v1_0_0_generic_memrd
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila_core
+Compiling module xil_defaultlib.ila_0_ila_v6_2_10_ila
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.Pipeline
+Compiling module simprims_ver.IBUF
+Compiling module xil_defaultlib.xsdbm_v3_0_0_ctl_reg
+Compiling module xil_defaultlib.xsdbm_v3_0_0_stat_reg
+Compiling module xil_defaultlib.xsdbm_v3_0_0_stat_reg__parameter...
+Compiling module xil_defaultlib.xsdbm_v3_0_0_ctl_reg__parameteri...
+Compiling module xil_defaultlib.xsdbm_v3_0_0_ctl_reg__parameteri...
+Compiling module simprims_ver.VCC
+Compiling module simprims_ver.FDCE(XON="FALSE")
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.clk_x_pntrs_7
+Compiling module xil_defaultlib.rd_fwft
+Compiling module xil_defaultlib.rd_status_flags_as_17
+Compiling module xil_defaultlib.rd_handshaking_flags__parameteri...
+Compiling module xil_defaultlib.rd_bin_cntr_18
+Compiling module xil_defaultlib.rd_logic__parameterized0
+Compiling module xil_defaultlib.wr_status_flags_as_14
+Compiling module xil_defaultlib.wr_handshaking_flags_15
+Compiling module xil_defaultlib.wr_bin_cntr_16
+Compiling module xil_defaultlib.wr_logic__parameterized0
+Compiling module simprims_ver.RAMD32
+Compiling module simprims_ver.RAMS32
+Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32M_HD80
+Compiling module xil_defaultlib.RAM32M_HD81
+Compiling module xil_defaultlib.dmem_13
+Compiling module xil_defaultlib.memory__parameterized0
+Compiling module xil_defaultlib.synchronizer_ff_9
+Compiling module xil_defaultlib.synchronizer_ff_10
+Compiling module xil_defaultlib.synchronizer_ff_11
+Compiling module xil_defaultlib.synchronizer_ff_12
+Compiling module simprims_ver.FDPE(XON="FALSE",INIT=1'b0)
+Compiling module xil_defaultlib.reset_blk_ramfifo_8
+Compiling module xil_defaultlib.fifo_generator_ramfifo__paramete...
+Compiling module xil_defaultlib.fifo_generator_top__parameterize...
+Compiling module xil_defaultlib.fifo_generator_v13_1_4_synth__pa...
+Compiling module xil_defaultlib.fifo_generator_v13_1_4__paramete...
+Compiling module xil_defaultlib.xsdbm_v3_0_0_rdfifo
+Compiling module xil_defaultlib.xsdbm_v3_0_0_rdreg
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.synchronizer_ff__parameterized0_...
+Compiling module xil_defaultlib.clk_x_pntrs
+Compiling module xil_defaultlib.rd_status_flags_as
+Compiling module xil_defaultlib.rd_handshaking_flags
+Compiling module xil_defaultlib.rd_bin_cntr
+Compiling module xil_defaultlib.rd_logic
+Compiling module xil_defaultlib.wr_status_flags_as
+Compiling module xil_defaultlib.wr_handshaking_flags
+Compiling module xil_defaultlib.wr_bin_cntr
+Compiling module xil_defaultlib.wr_logic
+Compiling module xil_defaultlib.RAM32M_HD82
+Compiling module xil_defaultlib.RAM32M_HD83
+Compiling module xil_defaultlib.RAM32M_HD84
+Compiling module xil_defaultlib.dmem
+Compiling module xil_defaultlib.memory
+Compiling module xil_defaultlib.synchronizer_ff
+Compiling module xil_defaultlib.synchronizer_ff_1
+Compiling module xil_defaultlib.synchronizer_ff_2
+Compiling module xil_defaultlib.synchronizer_ff_3
+Compiling module xil_defaultlib.reset_blk_ramfifo
+Compiling module xil_defaultlib.fifo_generator_ramfifo
+Compiling module xil_defaultlib.fifo_generator_top
+Compiling module xil_defaultlib.fifo_generator_v13_1_4_synth
+Compiling module xil_defaultlib.fifo_generator_v13_1_4
+Compiling module xil_defaultlib.xsdbm_v3_0_0_wrfifo
+Compiling module xil_defaultlib.xsdbm_v3_0_0_wrreg
+Compiling module xil_defaultlib.xsdbm_v3_0_0_ctl_reg__parameteri...
+Compiling module xil_defaultlib.xsdbm_v3_0_0_stat_reg__parameter...
+Compiling module xil_defaultlib.xsdbm_v3_0_0_if_static_status
+Compiling module xil_defaultlib.xsdbm_v3_0_0_if
+Compiling module xil_defaultlib.xsdbm_v3_0_0_addr_ctl
+Compiling module xil_defaultlib.xsdbm_v3_0_0_burst_wdlen_ctl
+Compiling module xil_defaultlib.xsdbm_v3_0_0_bus_ctl_flg__parame...
+Compiling module xil_defaultlib.xsdbm_v3_0_0_bus_ctl_flg
+Compiling module xil_defaultlib.xsdbm_v3_0_0_bus_ctl_cnt
+Compiling module xil_defaultlib.xsdbm_v3_0_0_bus_ctl
+Compiling module xil_defaultlib.xsdbm_v3_0_0_bus_mstr2sl_if
+Compiling module xil_defaultlib.xsdbm_v3_0_0_icon2xsdb
+Compiling module xil_defaultlib.xsdbm_v3_0_0_cmd_decode
+Compiling module xil_defaultlib.xsdbm_v3_0_0_stat
+Compiling module xil_defaultlib.xsdbm_v3_0_0_sync
+Compiling module xil_defaultlib.xsdbm_v3_0_0_icon
+Compiling module simprims_ver.BSCANE2
+Compiling module xil_defaultlib.ltlib_v1_0_0_bscan
+Compiling module xil_defaultlib.xsdbm_v3_0_0_bscan_switch
+Compiling module xil_defaultlib.xsdbm_v3_0_0_xsdbm_id
+Compiling module xil_defaultlib.xsdbm_v3_0_0_xsdbm
+Compiling module xil_defaultlib.dbg_hub
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_time_impl
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/xsim.dir/testbench_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim/xsim.dir/testbench_time_impl/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Apr 24 15:17:40 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 110.379 ; gain = 23.258
+INFO: [Common 17-206] Exiting Webtalk at Fri Apr 24 15:17:40 2020...
+run_program: Time (s): cpu = 00:00:06 ; elapsed = 00:05:18 . Memory (MB): peak = 2641.230 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '318' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/q1109/OneDrive/RISC_V/RISC_V.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_time_impl -key {Post-Implementation:sim_1:Timing:testbench} -tclbatch {testbench.tcl} -view {C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+open_wave_config C:/Users/q1109/OneDrive/RISC_V/testbench_behav.wcfg
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2641.230 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:22 ; elapsed = 00:05:57 . Memory (MB): peak = 2641.230 ; gain = 0.000
+run all
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 3011113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 3011160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 5011113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 5011160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 6611113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 6611160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 8211113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 8211160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 9831113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 9831160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 11431113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 11431160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 17828302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 20228302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 22228302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 24228302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 26228302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 28228302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/EX0/ALU0/add_op2_reg[29]/TChk163_35511 at time 30228302 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[12]/TChk163_35511 at time 32231113 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:\Xilinx\Vivado\2019.2\data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /testbench/C0/Pipeline_md/ID/register0/t2_reg[24]/TChk163_35511 at time 32231160 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2641.230 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 2641.230 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 24 15:20:55 2020...

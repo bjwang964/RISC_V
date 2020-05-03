@@ -26,9 +26,19 @@ module Pipeline(
         input sys_clk,
         input sys_reset,
 
-        output o_reg_ce,
-        output `RegBus o_reg_addr,
-        output `DataBus o_reg_data
+        output waddr_valid,
+        output wdata_valid,
+        output wdata_end,
+        output raddr_valid,
+        output rdata_end,
+        
+        input wdata_finish,
+        input rdata_finish,
+        input in_arr,
+        
+        output [31:0] wdata,
+        input [31:0] data,
+        input [31:0] test_data
     );
 
     wire finish;
@@ -221,7 +231,6 @@ module Pipeline(
     );
     
     
-    
     ila_0 your_instance_name (
 	.clk(sys_clk), // input wire clk
 
@@ -229,9 +238,10 @@ module Pipeline(
 	.probe0(o_instr), // input wire [31:0]  probe0  
 	.probe1(i_pc), // input wire [19:0]  probe1 
 	.probe2(clk), // input wire [0:0]  probe2 
-	.probe3(o_reg_addr), // input wire [31:0]  probe3 
-	.probe4(o_reg_data) // input wire [31:0]  probe4
+	.probe3(wb_id_reg_addr), // input wire [4:0]  probe3 
+	.probe4(test_data) // input wire [31:0]  probe4
 );
+    
 
 /***************execute***************/
 
@@ -336,7 +346,10 @@ module Pipeline(
         ex_mem_out_csr_we, ex_mem_out_csr_write_addr, ex_mem_out_csr_rdata,
 
         mem_wb_in_mem_data,
-        mem_wb_in_csr_we, mem_wb_in_csr_write_addr, mem_wb_in_csr_rdata
+        mem_wb_in_csr_we, mem_wb_in_csr_write_addr, mem_wb_in_csr_rdata,
+        
+        waddr_valid, wdata_valid, wdata_end, raddr_valid, rdata_end, wdata_finish, 
+        rdata_finish, in_arr, wdata, data
     );
 
     mem_wb mw
@@ -359,10 +372,14 @@ module Pipeline(
         wb_id_reg_ce, wb_id_reg_addr, wb_id_reg_data,
         wb_id_csr_ce, wb_id_csr_addr, wb_id_csr_data
     );
-
+/*
     assign o_reg_ce = wb_id_reg_ce;
     assign o_reg_addr = wb_id_reg_addr;
     assign o_reg_data = wb_id_reg_data;
+*/
+
+
+
 
 
 endmodule

@@ -144,7 +144,7 @@ module register(
               Regsiter[28] = 32'h0000001c;
               Regsiter[29] = 32'h0000001d;
               Regsiter[30] = 32'h0000001e;
-              Regsiter[31] = 32'hffffffff;
+              Regsiter[31] = 32'hfffffff0;
               
               
               CSR[0] = 32'h00000000;
